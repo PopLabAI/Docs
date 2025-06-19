@@ -1,0 +1,230 @@
+import { t, Translations } from '@/lib/translations'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'Welcome to PopLab AI',
+    'zh-CN': '欢迎使用 PopLab AI',
+    'ja-JP': 'PopLab AI へようこそ',
+  },
+  'metadata-description': {
+    'en': 'Welcome AI into your everyday, play and create Pop AI apps with ease. Enjoy fun and powerful AI without the complexity of models or prompts',
+    'zh-CN': '迎接 AI 进入你的日常生活，轻松玩转和创建 Pop AI 应用。通过全新的交互方式和产品形态体验 AI 的乐趣。',
+    'ja-JP': 'AI を日常に取り入れ、簡単に Pop AI アプリを作成して遊びましょう。全く新しいインタラクション方法や製品形態でAIの楽しさを体験してください。',
+  },
+  'sections-features': {
+    'en': 'Core Features',
+    'zh-CN': '核心功能',
+    'ja-JP': 'コア機能',
+  },
+  'sections-mission': {
+    'en': 'Mission',
+    'zh-CN': '使命',
+    'ja-JP': 'ミッション',
+  },
+  'sections-vision': {
+    'en': 'Vision',
+    'zh-CN': '愿景',
+    'ja-JP': 'ビジョン',
+  },
+  'sections-resources': {
+    'en': 'Resources',
+    'zh-CN': '资源',
+    'ja-JP': 'リソース',
+  },
+  'h2-features': {
+    'en': 'Core Features',
+    'zh-CN': '核心功能',
+    'ja-JP': 'コア機能',
+  },
+  'li-features-1': {
+    'en': 'Create AI apps without coding, platform hosted, no deployment.',
+    'zh-CN': '无需编码 (No Code) 快速创建 AI 应用，平台托管，无需部署。',
+    'ja-JP': 'コーディングなしで AI アプリを作成する (No Code)、プラットフォームホスティング、デプロイ不要。',
+  },
+  'li-features-2': {
+    'en': 'Use the simplest interaction to use the most powerful AI capabilities, no need to care about model prompt details.',
+    'zh-CN': '用最简单的交互使用最先进的 AI 能力，表单输入信息无需再关心模型提示词等细节。',
+    'ja-JP': '最シンプルなインタラクションで最強の AI 能力を使用する、モデルのプロンプトの詳細を気にする必要はありません。',
+  },
+  'li-features-3': {
+    'en': 'Share AI apps with the world, participate in the creation incentive plan, and earn income',
+    'zh-CN': '将 AI 应用分享给全世界，参与创作激励计划，获取收益',
+    'ja-JP': 'AI アプリを世界中に共有し、創作支援計画に参加して収益を得る',
+  },
+  'li-features-4': {
+    'en': 'Build your own AI app library, easily manage and distribute AI apps to your team or customers.',
+    'zh-CN': '打造个人/团队 AI 应用库，轻松实现 AI 应用的管理和分发。',
+    'ja-JP': '自分の AI アプリライブラリを作成し、AI アプリの管理と配布を簡単にする。',
+  },
+  'li-features-5': {
+    'en': 'Integrate mainstream AI models, no need to be bound by a single AI model provider, call diverse AI models according to your needs.',
+    'zh-CN': '集成主流 AI 模型，不受单一 AI 模型服务商的限制和绑定，根据需求精准调用最佳模型。',
+    'ja-JP': '主流 AI モデルを統合し、単一の AI モデルプロバイダーの制限を受けず、必要に応じて多様な AI モデルを呼び出す。',
+  },
+  'li-features-6': {
+    'en': 'Support using your own model service API Key, no need to register to use AI App',
+    'zh-CN': '支持使用自己的模型服务商 API Key，无需注册即可使用 AI App',
+    'ja-JP': '独自のモデルサービスの API キーを使用し、AI アプリを使用するために登録する必要はありません',
+  },
+  'h2-start-using': {
+    'en': 'Start Using',
+    'zh-CN': '开始使用',
+    'ja-JP': '使用開始',
+  },
+  'description': {
+    'en': 'Welcome AI into your everyday, play and create Pop AI apps with ease. Enjoy fun and powerful AI without the complexity of models or prompts',
+    'zh-CN': '迎接 AI 进入你的日常生活，轻松玩转和创建 Pop AI 应用。通过全新的交互方式和产品形态体验 AI 的乐趣。',
+    'ja-JP': 'AI を日常に取り入れ、簡単に Pop AI アプリを作成して遊びましょう。全く新しいインタラクション方法や製品形態でAIの楽しさを体験してください。',
+  },
+  'quickstart-button': {
+    'en': 'Quick Start',
+    'zh-CN': '快速开始',
+    'ja-JP': 'クイックスタート',
+  },
+  'poplab-button': {
+    'en': 'Go to PopLab',
+    'zh-CN': '前往 PopLab',
+    'ja-JP': 'PopLab へ',
+  },
+  'h2-welcome': {
+    'en': 'Welcome to PopLab AI',
+    'zh-CN': '欢迎使用 PopLab AI',
+    'ja-JP': 'PopLab AI へようこそ',
+  },
+  'p-welcome-description-1': {
+    'en': 'PopLab AI is a lightweight AI app platform and community for all users. Here you can easily experience many fun and professional AI apps. If you have a great idea, PopLab AI can help you turn it into a publicly shareable "Pop AI app" in seconds. The platform includes mainstream models (OpenAI, Gemini, Anthropic, DeepSeek, etc.) and visual forms, making "using AI" and "creating AI" equally easy. ',
+    'zh-CN': 'PopLab AI 是一款面向所有用户的轻量级 AI 应用创作平台和分享社区，在这里你可以轻松体验众多有趣和专业的 AI 应用，如果你有一个超棒的想法，PopLab AI 可在数秒内帮你将想法转为可公开分享的「Pop AI 应用」。平台内置主流模型（OpenAI、Gemini、Anthropic、DeepSeek 等）与可视化表单，让“使用 AI”与“创造 AI”变得同样轻松。',
+    'ja-JP': 'PopLab AI は、すべてのユーザー向けの軽量な AI アプリプラットフォームとコミュニティです。ここでは、多くの楽しいアプリと専門アプリを簡単に体験できます。もし、素晴らしいアイデアがあれば、PopLab AI はそれを数秒で公開可能な「Pop AI アプリ」に変えることができます。プラットフォームには、主流モデル（OpenAI、Gemini、Anthropic、DeepSeek など）と可視化フォームが組み込まれており、「AI を使用する」と「AI を作成する」が同じくらい簡単になります。'
+  },
+  'p-welcome-description-2': {
+    'en': 'Whether it\'s a personal toy, a daily professional tool, or a team\'s quick validation MVP, PopLab AI can provide unexpected value. No coding, no deployment, no complex problems, making AI app creation as simple as posting a tweet.',
+    'zh-CN': '无论是个人灵光一闪的玩具、日常使用的专业工具、还是团队快速验证的 MVP，PopLab AI 都能提供超乎预期的价值。无需代码、无需面对部署、托管等复杂问题，让 AI 应用创作像发一条帖子一样简单。',
+    'ja-JP': '個人の一時的なもの、日常の専門ツール、チームの迅速な検証の MVP など。PopLab AI は、予想外の価値を提供できます。コーディングなし、デプロイ、複雑な問題なし、ツイートのように AI アプリの作成を簡単にすることができます。',
+  },
+  'h2-mission': {
+    'en': 'Our Mission',
+    'zh-CN': 'PopLab AI 使命',
+    'ja-JP': '私たちのミッション',
+  },
+  'h3-mission-title': {
+    'en': '❤️ One Tap AI for Everyone',
+    'zh-CN': '❤️ 人人都爱用的一键 AI 应用',
+    'ja-JP': '❤️ 誰でも使える一押し AI アプリ',
+  },
+  'p-mission-description': {
+    'en': 'Our mission is to give every user instant access to a growing library of playful and useful Pop AI apps. No setup, no settings. Just open, tap, and enjoy the power of today\'s best and funniest large language models in everyday life.',
+    'zh-CN': 'PopLab AI 的使命是让每个用户都能随时随地使用丰富有趣的 Pop AI 应用。无需设置，无需配置，只需打开轻触，就能在日常生活中体验到当今最强大最有趣的 AI 模型的力量。',
+    'ja-JP': 'PopLab AI の使命は、すべてのユーザーが、楽しい、便利な Pop AI アプリのライブラリに即座にアクセスできるようにすることです。セットアップも設定も不要です。ただ開き、タップするだけで、今日の最も強力で楽しい大言語モデルの力を日常の中で体験できます。',
+  },
+  'h2-vision': {
+    'en': 'Our Vision',
+    'zh-CN': 'PopLab AI 愿景',
+    'ja-JP': '私たちの展望',
+  },
+  'h3-vision-title': {
+    'en': '🌲 AI in Every Pocket and Moment',
+    'zh-CN': '🌲 AI 随身，创造无处不在',
+    'ja-JP': '🌲 すべてのポケットと瞬間に AI',
+  },
+  'p-vision-description': {
+    'en': 'We envision a world where AI apps are as common and effortless as scrolling a feed. PopLab AI will be the go-to playground where millions create, use, and share AI experiences that spark creativity, boost productivity, and bring joy to daily routines.',
+    'zh-CN': '我们希望 AI 应用像刷信息流一样普及且轻松。PopLab AI 将成为每一位用户创造、使用、分享 AI 体验的首选乐园，激发创造力，提升效率，点亮生活乐趣。',
+    'ja-JP': 'AI アプリがフィードをスクロールするように当たり前で簡単になる世界を描いています。PopLab AI は何百万人ものユーザーが AI 体験を創造・利用・共有し、創造性を刺激し、生産性を高め、日常に楽しさをもたらすプレイグラウンドになります。',
+  },
+  'p-features-description': {
+    'en': 'PopLab AI helps you create AI apps without coding. With the simplest interaction, anyone can create their own AI apps.',
+    'zh-CN': 'PopLab AI 可以帮助您无需编码创建 AI 应用，通过最简单的交互，每个人都可以制作自己的 AI 应用。',
+    'ja-JP': 'PopLab AI を使用すると、コーディングなしで AI アプリを作成できます。最もシンプルなインタラクションで、誰でも自分の AI アプリを作成できます。',
+  },
+  'p-start-using-description': {
+    'en': 'In PopLab, you can not only create your own AI apps, but also explore other creators\' AI apps. There are many fun and interesting apps, as well as professional apps in various fields, waiting for you to discover.',
+    'zh-CN': '在 PopLab 中，你不仅可以创建自己的 AI 应用，也可以探索其它创作者分享的 AI 应用。众多好玩有趣的应用，以及细分领域的专业应用，等你去尝试。',
+    'ja-JP': 'PopLab では、自分の AI アプリを作成するだけでなく、他のクリエイターの AI アプリを探索することもできます。多くの楽しいアプリと、様々な分野の専門アプリがあります。',
+  },
+  'p-start-using-note-title': {
+    'en': 'Beta Testing',
+    'zh-CN': 'Beta 测试阶段',
+    'ja-JP': 'ベータテスト段階',
+  },
+  'p-start-using-note': {
+    'en': 'Currently, PopLab AI is in the Beta testing phase. To create AI apps, you need to apply for the internal test and obtain an account. When using other creators\' AI apps, you can experience them without logging in.',
+    'zh-CN': '目前 PopLab AI 还处于 Beta 测试阶段，创建 AI APP 功能需先申请加入内测，获得账号后即可创建。使用其它创作者创建的 AI APP 时，无需登录账号即可体验。',
+    'ja-JP': '現在、PopLab AI はベータテスト段階です。AI アプリを作成するには、内部テストに申し込んでアカウントを取得する必要があります。他のクリエイターが作成した AI アプリを使用する場合、ログインせずに体験できます。',
+  },
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [
+  { title: i('sections-features'), id: 'features' },
+  { title: i('sections-mission'), id: 'mission' },
+  { title: i('sections-vision'), id: 'vision' },
+  { title: i('sections-resources'), id: 'resources' },
+]
+
+{/* Start of Page */}
+
+<HeroPattern />
+
+# {i('title')}
+
+<div className="lead">
+  <p>{i('description')}</p>
+</div>
+
+<div className="not-prose mt-6 mb-16 flex gap-3">
+  <Button href="/zh-CN/quickstart" arrow="right">
+    {i('quickstart-button')}
+  </Button>
+  <Button href="https://poplab.ai" variant="outline">
+    {i('poplab-button')}
+  </Button>
+</div>
+
+## {i('h2-welcome')}
+{p('p-welcome-description-1')}
+{p('p-welcome-description-2')}
+
+## {i('h2-features')}
+{p('p-features-description')}
+- {i('li-features-1')}
+- {i('li-features-2')}
+- {i('li-features-3')}
+- {i('li-features-4')}
+- {i('li-features-5')}
+- {i('li-features-6')}
+
+<Note title={i('p-start-using-note-title')}>
+  {i('p-start-using-note')}
+</Note>
+
+<Guides />
+
+
+## {i('h2-mission')}
+### <span className="text-orange-500">{i('h3-mission-title')}</span>
+{p('p-mission-description')}
+
+## {i('h2-vision')}
+### <span className="text-orange-500">{i('h3-vision-title')}</span>
+{p('p-vision-description')}
+
+<Resources /> 

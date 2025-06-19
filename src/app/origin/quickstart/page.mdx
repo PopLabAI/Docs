@@ -1,0 +1,217 @@
+import { t, Translations } from '@/lib/translations'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { AppCard } from '@/components/AppCard'
+import { ChatBubbleIcon } from '@/components/icons/ChatBubbleIcon'
+import { ShapesIcon } from '@/components/icons/ShapesIcon'
+import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
+import { CopyIcon } from '@/components/icons/CopyIcon'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+import { Note } from '@/components/mdx'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'Quickstart',
+    'zh-CN': '快速开始',
+    'ja-JP': 'クイックスタート',
+  },
+  'metadata-description': {
+    'en': 'Get started with PopLab AI - Learn how to try AI apps, explore the community, create apps with AI, and share your creations.',
+    'zh-CN': '开始使用 PopLab AI - 学习如何体验 AI 应用、探索社区、使用 AI 创建应用并分享你的作品。',
+    'ja-JP': 'PopLab AI を始めましょう - AI アプリの体験、コミュニティの探索、AI を使ったアプリ作成、作品の共有方法を学びます。',
+  },
+  'sections-try-app': {
+    'en': 'Try AI Apps',
+    'zh-CN': '体验 AI 应用',
+    'ja-JP': 'AI アプリを体験',
+  },
+  'sections-explore-community': {
+    'en': 'Explore Popbox Community',
+    'zh-CN': '探索应用社区 Popbox',
+    'ja-JP': 'Popbox コミュニティを探索',
+  },
+  'sections-create-with-ai': {
+    'en': 'Create Apps with AI',
+    'zh-CN': '使用 AI 创建应用',
+    'ja-JP': 'AI でアプリを作成',
+  },
+  'sections-share-apps': {
+    'en': 'Share Apps',
+    'zh-CN': '分享应用',
+    'ja-JP': 'アプリを共有',
+  },
+  'p-description': {
+    'en': 'Welcome AI into your everyday, play and create Pop AI apps with ease. Enjoy fun and powerful AI without the complexity of models or prompts',
+    'zh-CN': '迎接 AI 进入你的日常生活，轻松玩转和创建 Pop AI 应用。通过全新的交互方式和产品形态体验 AI 的乐趣。',
+    'ja-JP': 'AI を日常に取り入れ、簡単に Pop AI アプリを作成して遊びましょう。全く新しいインタラクション方法や製品形態でAIの楽しさを体験してください。',
+  },
+  'p-try-app-description': {
+    'en': 'Open the app page, view descriptions and examples, select a model, fill in your API key, enter information in the Input field or upload images, click Generate, and the results will be displayed in the Output section.',
+    'zh-CN': '打开应用页面，查看描述和example展示，选择模型，填写 api key，在 Input 中输入信息，或者上传图片，点击 Generate，Output 中将显示结果。',
+    'ja-JP': 'アプリページを開き、説明と例を確認し、モデルを選択し、API キーを入力し、Input フィールドに情報を入力するか画像をアップロードし、Generate をクリックすると、結果が Output セクションに表示されます。',
+  },
+  'note-api-key': {
+    'en': 'If you don\'t have an API Key, we recommend applying for a free Google Gemini API to experience most text generation apps. For amazing image generation apps, you can enable OpenAI\'s API service.',
+    'zh-CN': '如果没有 API Key 推荐申请免费的 Google Gemini API，即可体验大部份文字生成类应用，开通 OpenAI 的 API 服务即可体验超棒的图片生成类应用',
+    'ja-JP': 'API キーをお持ちでない場合は、無料の Google Gemini API の申請をお勧めします。これにより、ほとんどのテキスト生成アプリを体験できます。素晴らしい画像生成アプリについては、OpenAI の API サービスを有効にしてください。',
+  },
+  'h3-recommended-apps': {
+    'en': 'Recommended AI Apps:',
+    'zh-CN': '推荐体验的 AI 应用：',
+    'ja-JP': 'おすすめの AI アプリ：',
+  },
+  'appcard-chat-assistant-title': {
+    'en': 'AI Chat Assistant',
+    'zh-CN': 'AI 聊天助手',
+    'ja-JP': 'AI チャットアシスタント',
+  },
+  'appcard-chat-assistant-desc': {
+    'en': 'Intelligent conversation partner that can help with various tasks and answer questions.',
+    'zh-CN': '智能对话伙伴，可以帮助处理各种任务并回答问题。',
+    'ja-JP': '様々なタスクを支援し、質問に答えることができるインテリジェントな会話パートナー。',
+  },
+  'appcard-image-generator-title': {
+    'en': 'AI Image Generator',
+    'zh-CN': 'AI 图像生成器',
+    'ja-JP': 'AI 画像生成器',
+  },
+  'appcard-image-generator-desc': {
+    'en': 'Create stunning images from text descriptions using advanced AI models.',
+    'zh-CN': '使用先进的 AI 模型从文本描述创建令人惊叹的图像。',
+    'ja-JP': '高度な AI モデルを使用してテキスト説明から素晴らしい画像を作成。',
+  },
+  'p-explore-community-description': {
+    'en': 'Discover thousands of AI applications created by the community. Find inspiration, learn from others, and explore the latest AI innovations.',
+    'zh-CN': '探索社区创建的数千个 AI 应用。寻找灵感，向他人学习，探索最新的 AI 创新。',
+    'ja-JP': 'コミュニティが作成した数千の AI アプリケーションを発見。インスピレーションを見つけ、他の人から学び、最新の AI イノベーションを探索。',
+  },
+  'button-go-to-popbox': {
+    'en': 'Go to Popbox',
+    'zh-CN': '前往 Popbox',
+    'ja-JP': 'Popbox へ',
+  },
+  'p-create-with-ai-description': {
+    'en': 'Create AI applications in under a minute with AI assistance. You just need an idea or a prompt to instantly try creating your AI app. We recommend creating apps directly from the homepage prompt/idea input box. After entering your idea, click generate, and AI will automatically help you generate app information including name, description, tags, prompts, input components, case demonstrations, and recommended AI models. Click the create button after confirming everything is correct.',
+    'zh-CN': '通过 AI 一分钟不到完成应用创建。你只需要有一个想法，或者一个提示词即可立刻尝试创建你的 AI 应用。推荐直接从首页 prompt/idea 输入框创建应用，输入 idea 后点击生成，ai 将自动帮你生成应用的信息，包括名字、描述、标签、提示词、输入组件、案例展示、推荐 AI 模型等。确认无误后点击创建按钮。',
+    'ja-JP': 'AI の支援により、1分以内に AI アプリケーションを作成。アイデアやプロンプトがあれば、すぐに AI アプリの作成を試すことができます。ホームページの prompt/idea 入力ボックスから直接アプリを作成することをお勧めします。アイデアを入力した後、生成をクリックすると、AI が自動的にアプリ情報（名前、説明、タグ、プロンプト、入力コンポーネント、ケースデモンストレーション、推奨 AI モデルなど）を生成します。すべて正しいことを確認した後、作成ボタンをクリックしてください。',
+  },
+  'p-create-with-ai-alternative': {
+    'en': 'You can also go to the app creation page and click the "Create App with AI" button in the top right corner to open the idea/prompt input box.',
+    'zh-CN': '也可以在 app 创建页面中，点击右上角的 "Create App with AI" 按钮打开 idea/prompt 输入框',
+    'ja-JP': 'アプリ作成ページに移動し、右上の「Create App with AI」ボタンをクリックして idea/prompt 入力ボックスを開くこともできます。',
+  },
+  'p-share-apps-description': {
+    'en': 'In the app page, find the share operation in the more actions icon in the top right corner. Click to open a popup where you can directly copy the sharing text for sharing.',
+    'zh-CN': '在应用页面右上角的更多操作icon中找到share操作，点击后打开弹窗，可以直接复制分享文案进行分享',
+    'ja-JP': 'アプリページの右上のその他の操作アイコンで共有操作を見つけ、クリックしてポップアップを開き、共有テキストを直接コピーして共有できます。',
+  },
+  'h2-next-steps': {
+    'en': 'Next Steps',
+    'zh-CN': '下一步',
+    'ja-JP': '次のステップ',
+  },
+  'link-detailed-app-usage': {
+    'en': 'Detailed app usage tips',
+    'zh-CN': '使用应用的详细技巧',
+    'ja-JP': 'アプリ使用の詳細なヒント',
+  },
+  'link-ai-create-app-docs': {
+    'en': 'Learn more about AI-powered app creation',
+    'zh-CN': '了解更详细的 AI 自动创建应用文档',
+    'ja-JP': 'AI によるアプリ作成について詳しく学ぶ',
+  },
+  'link-create-app-guide': {
+    'en': 'Detailed app creation guide',
+    'zh-CN': '详细创建应用指南',
+    'ja-JP': '詳細なアプリ作成ガイド',
+  },
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [
+  { title: i('sections-try-app'), id: 'try-app' },
+  { title: i('sections-explore-community'), id: 'explore-community' },
+  { title: i('sections-create-with-ai'), id: 'create-with-ai' },
+  { title: i('sections-share-apps'), id: 'share-apps' },
+]
+
+{/* Start of Page */}
+
+# {i('title')}
+<div className="lead">
+  {p('p-description')}
+</div>
+
+## {i('sections-try-app')}
+
+{p('p-try-app-description')}
+
+<Note>
+  {i('note-api-key')} 
+  [Google Gemini API →](https://aistudio.google.com/apikey) <span className="mx-2 text-zinc-300 dark:text-zinc-600">|</span> [OpenAI API →](https://platform.openai.com/api-keys)
+</Note>
+
+### {i('h3-recommended-apps')}
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <AppCard
+    title={i('appcard-chat-assistant-title')}
+    description={i('appcard-chat-assistant-desc')}
+    icon={<ChatBubbleIcon className="h-6 w-6 text-blue-600" />}
+    provider="Gemini"
+    href="/apps/chat-assistant"
+    tags={['Text Generation', 'Conversation']}
+  />
+  <AppCard
+    title={i('appcard-image-generator-title')}
+    description={i('appcard-image-generator-desc')}
+    icon={<ShapesIcon className="h-6 w-6 text-purple-600" />}
+    provider="OpenAI"
+    href="/apps/image-generator"
+    tags={['Image Generation', 'Creative']}
+  />
+</div>
+
+## {i('sections-explore-community')}
+
+{p('p-explore-community-description')}
+
+<div className="my-6">
+  <Button href="/popbox" arrow="right">
+    {i('button-go-to-popbox')}
+  </Button>
+</div>
+
+## {i('sections-create-with-ai')}
+
+{p('p-create-with-ai-description')}
+
+{p('p-create-with-ai-alternative')}
+
+## {i('sections-share-apps')}
+
+{p('p-share-apps-description')}
+
+## {i('h2-next-steps')}
+
+- [{i('link-detailed-app-usage')}](/play-app)
+- [{i('link-ai-create-app-docs')}](/ai-create-app)
+- [{i('link-create-app-guide')}](/create-app)
+

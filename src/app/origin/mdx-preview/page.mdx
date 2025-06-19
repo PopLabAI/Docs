@@ -1,0 +1,435 @@
+import { Libraries } from '@/components/Libraries'
+import { Code } from '@/components/Code'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { BellIcon } from '@/components/icons/BellIcon'
+import { BoltIcon } from '@/components/icons/BoltIcon'
+import { BookIcon } from '@/components/icons/BookIcon'
+import { CalendarIcon } from '@/components/icons/CalendarIcon'
+import { CartIcon } from '@/components/icons/CartIcon'
+import { ChatBubbleIcon } from '@/components/icons/ChatBubbleIcon'
+import { CheckIcon } from '@/components/icons/CheckIcon'
+import { ChevronRightLeftIcon } from '@/components/icons/ChevronRightLeftIcon'
+import { ClipboardIcon } from '@/components/icons/ClipboardIcon'
+import { CogIcon } from '@/components/icons/CogIcon'
+import { CopyIcon } from '@/components/icons/CopyIcon'
+import { DocumentIcon } from '@/components/icons/DocumentIcon'
+import { EnvelopeIcon } from '@/components/icons/EnvelopeIcon'
+import { FaceSmileIcon } from '@/components/icons/FaceSmileIcon'
+import { FolderIcon } from '@/components/icons/FolderIcon'
+import { LinkIcon } from '@/components/icons/LinkIcon'
+import { ListIcon } from '@/components/icons/ListIcon'
+import { MagnifyingGlassIcon } from '@/components/icons/MagnifyingGlassIcon'
+import { MapPinIcon } from '@/components/icons/MapPinIcon'
+import { PackageIcon } from '@/components/icons/PackageIcon'
+import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
+import { PaperClipIcon } from '@/components/icons/PaperClipIcon'
+import { ShapesIcon } from '@/components/icons/ShapesIcon'
+import { ShirtIcon } from '@/components/icons/ShirtIcon'
+import { SquaresPlusIcon } from '@/components/icons/SquaresPlusIcon'
+import { TagIcon } from '@/components/icons/TagIcon'
+import { UserIcon } from '@/components/icons/UserIcon'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+
+export const metadata = {
+  title: 'MDX Components Preview',
+  description: 'A comprehensive preview of all available MDX components and their usage examples.',
+}
+
+# MDX Components Preview
+
+This page showcases all available MDX components and their usage examples. Use this as a reference for building documentation pages.
+
+## Basic Components
+
+### Note Component
+
+<Note>
+  This is a note component that displays important information with an info icon.
+  It's commonly used for warnings, tips, or important notices.
+</Note>
+
+### Button Component
+
+<div className="not-prose mt-6 mb-16 flex gap-3">
+  <Button href="/quickstart" arrow="right">
+    Primary Button
+  </Button>
+  <Button href="/sdks" variant="outline">
+    Outline Button
+  </Button>
+  <Button href="/conversations" variant="text" arrow="right">
+    Text Button
+  </Button>
+</div>
+
+### Code Components
+
+#### CodeGroup with Multiple Languages
+
+<CodeGroup>
+
+```bash {{ title: 'cURL' }}
+# cURL is most likely already installed on your machine
+curl --version
+```
+
+```bash {{ language: 'js' }}
+# Install the Protocol JavaScript SDK
+npm install @example/protocol-api --save
+```
+
+```bash {{ language: 'python' }}
+# Install the Protocol Python SDK
+pip install protocol_api
+```
+
+```bash {{ language: 'php' }}
+# Install the Protocol PHP SDK
+composer require protocol/sdk
+```
+
+</CodeGroup>
+
+#### CodeGroup with API Endpoint
+
+<CodeGroup tag="GET" label="/v1/conversations">
+
+```bash {{ title: 'cURL' }}
+curl -G https://api.protocol.chat/v1/conversations \
+  -H "Authorization: Bearer {token}" \
+  -d limit=10
+```
+
+```js
+import ApiClient from '@example/protocol-api'
+
+const client = new ApiClient(token)
+
+await client.conversations.list()
+```
+
+```python
+from protocol_api import ApiClient
+
+client = ApiClient(token)
+
+client.conversations.list()
+```
+
+```php
+$client = new \Protocol\ApiClient($token);
+
+$client->conversations->list();
+```
+
+</CodeGroup>
+
+### Layout Components
+
+#### Row and Col Layout
+
+<Row>
+  <Col>
+    This is the left column content. It can contain any markdown content including:
+    
+    - Lists
+    - **Bold text**
+    - *Italic text*
+    - [Links](#)
+    
+    The Row component creates a two-column layout that stacks on mobile devices.
+  </Col>
+  <Col>
+    This is the right column content. You can also add the `sticky` prop to make it stick to the top when scrolling:
+    
+    ```js
+    <Col sticky>
+      Sticky content here
+    </Col>
+    ```
+  </Col>
+</Row>
+
+### Properties Component
+
+<Properties>
+  <Property name="id" type="string">
+    Unique identifier for the resource.
+  </Property>
+  <Property name="created_at" type="timestamp">
+    Timestamp of when the resource was created.
+  </Property>
+  <Property name="updated_at" type="timestamp">
+    Timestamp of when the resource was last updated.
+  </Property>
+  <Property name="is_active" type="boolean">
+    Whether the resource is currently active.
+  </Property>
+</Properties>
+
+## Complex Components
+
+### Guides Component
+
+<Guides />
+
+### Resources Component
+
+<Resources />
+
+### Libraries Component
+
+<Libraries />
+
+### Icons Component
+
+All available icons in the project:
+
+<div className="not-prose my-8">
+  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <BellIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">BellIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <BoltIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">BoltIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <BookIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">BookIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <CalendarIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">CalendarIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <CartIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">CartIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <ChatBubbleIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">ChatBubbleIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <CheckIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">CheckIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <ChevronRightLeftIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">ChevronRightLeftIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <ClipboardIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">ClipboardIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <CogIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">CogIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <CopyIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">CopyIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <DocumentIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">DocumentIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <EnvelopeIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">EnvelopeIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <FaceSmileIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">FaceSmileIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <FolderIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">FolderIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <LinkIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">LinkIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <ListIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">ListIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <MagnifyingGlassIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">MagnifyingGlassIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <MapPinIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">MapPinIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <PackageIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">PackageIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <PaperAirplaneIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">PaperAirplaneIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <PaperClipIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">PaperClipIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <ShapesIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">ShapesIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <ShirtIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">ShirtIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <SquaresPlusIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">SquaresPlusIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <TagIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">TagIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <UserIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">UserIcon</span>
+    </div>
+    <div className="flex flex-col items-center p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+      <UsersIcon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-sky-300/10 dark:group-hover:stroke-sky-400" />
+      <span className="text-xs text-center font-medium">UsersIcon</span>
+    </div>
+  </div>
+</div>
+
+## Inline Code Examples
+
+You can use inline code with backticks: `const example = "code"`
+
+Or use the Code component for more styling:
+
+<Code>const example = "styled code"</Code>
+
+## Headings with Anchors
+
+h2 title will be auto added an anchor link, if you add \{\{ anchor: false \}\} after the h2 title, the anchor link will not be added.
+
+## → Regular Heading {{ anchor: false }}
+
+This heading doesn't have an anchor link.  \{\{ anchor: false \}\}
+
+## → Heading with Anchor
+
+This heading has an automatic anchor link.
+
+## Text Styling
+
+### Lead Text
+
+This is lead text that appears larger and more prominent. {{ className: 'lead' }}
+
+### Regular Paragraph
+
+This is regular paragraph text with normal styling.
+
+## Links and Navigation
+
+<div className="not-prose">
+  <Button href="/conversations" variant="text" arrow="right">
+    Read the docs for the Conversations endpoint
+  </Button>
+</div>
+
+## Complete Example Section
+
+Here's how you might structure a complete API documentation section:
+
+## Example API Endpoint {{ tag: 'POST', label: '/v1/messages' }}
+
+<Row>
+  <Col>
+    This endpoint allows you to send a new message to one of your conversations.
+
+    ### Required attributes
+
+    <Properties>
+      <Property name="conversation_id" type="string">
+        Unique identifier for the conversation the message belongs to.
+      </Property>
+      <Property name="message" type="string">
+        The message content.
+      </Property>
+    </Properties>
+
+    ### Optional attributes
+
+    <Properties>
+      <Property name="attachments" type="array">
+        An array of attachment objects associated with the message.
+      </Property>
+    </Properties>
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="POST" label="/v1/messages">
+
+    ```bash {{ title: 'cURL' }}
+    curl https://api.protocol.chat/v1/messages \
+      -H "Authorization: Bearer {token}" \
+      -d conversation_id="xgQQXg3hrtjh7AvZ" \
+      -d message="Hello, world!"
+    ```
+
+    ```js
+    import ApiClient from '@example/protocol-api'
+
+    const client = new ApiClient(token)
+
+    await client.messages.send({
+      conversation_id: 'xgQQXg3hrtjh7AvZ',
+      message: 'Hello, world!',
+    })
+    ```
+
+    ```python
+    from protocol_api import ApiClient
+
+    client = ApiClient(token)
+
+    client.messages.send(
+      conversation_id="xgQQXg3hrtjh7AvZ",
+      message="Hello, world!",
+    )
+    ```
+
+    ```php
+    $client = new \Protocol\ApiClient($token);
+
+    $client->messages->send([
+      'conversation_id' => 'xgQQXg3hrtjh7AvZ',
+      'message' => 'Hello, world!',
+    ]);
+    ```
+
+    </CodeGroup>
+
+    ```json {{ title: 'Response' }}
+    {
+      "id": "gWqY86BMFRiH5o11",
+      "conversation_id": "xgQQXg3hrtjh7AvZ",
+      "message": "Hello, world!",
+      "created_at": 692233200,
+      "updated_at": null
+    }
+    ```
+
+  </Col>
+</Row>
+
+<div className="not-prose">
+  <Button href="/messages" variant="text" arrow="right">
+    Read the complete Messages documentation
+  </Button>
+</div> 
