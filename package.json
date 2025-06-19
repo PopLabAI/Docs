@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "gen-i18n": "node scripts/gen-i18n-once.js",
-    "gen-i18n:watch": "node scripts/gen-i18n-watch.js"
+    "gen-i18n:watch": "node scripts/gen-i18n-watch.js",
+    "pages:build": "npm run gen-i18n && next build",
+    "pages:deploy": "npm run pages:build && wrangler pages deploy .next"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {

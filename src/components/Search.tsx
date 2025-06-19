@@ -21,7 +21,7 @@ import {
 } from 'react'
 import Highlighter from 'react-highlight-words'
 
-import { navigation } from '@/components/Navigation'
+import { useNavigation } from '@/components/Navigation'
 import { type Result } from '@/mdx/search.mjs'
 import { useMobileNavigationStore } from './MobileNavigation'
 
@@ -168,6 +168,8 @@ function SearchResult({
   query: string
 }) {
   let id = useId()
+
+  let navigation = useNavigation()
 
   let sectionTitle = navigation.find((section) =>
     section.links.find((link) => link.href === result.url.split('#')[0]),

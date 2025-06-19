@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { Button } from '@/components/Button'
-import { navigation } from '@/components/Navigation'
+import { useNavigation } from '@/components/Navigation'
 import { getLocaleFromPath } from '@/lib/locale'
 
 function PageLink({
@@ -40,7 +40,8 @@ function PageLink({
 
 function PageNavigation() {
   let pathname = usePathname()
-  let allPages = navigation().flatMap((group) => group.links)
+  let navigation = useNavigation()
+  let allPages = navigation.flatMap((group) => group.links)
   let currentPageIndex = allPages.findIndex((page) => page.href === pathname)
 
   if (currentPageIndex === -1) {

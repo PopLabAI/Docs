@@ -314,7 +314,7 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
 }
 
 // export navigation function for other components
-export function navigation() {
+export function useNavigation() {
   const pathname = usePathname()
   const currentLocale = getLocaleFromPath(pathname)
   return getNavigation(currentLocale)
