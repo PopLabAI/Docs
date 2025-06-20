@@ -4,7 +4,6 @@ import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
 import { Button } from '@/components/Button'
 import { AppCard } from '@/components/AppCard'
-import { ChatBubbleIcon } from '@/components/icons/ChatBubbleIcon'
 import { ShapesIcon } from '@/components/icons/ShapesIcon'
 import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
 import { CopyIcon } from '@/components/icons/CopyIcon'
@@ -51,7 +50,7 @@ export const content = {
   },
   'p-try-app-description': {
     'en': 'Open the app page, view descriptions and examples, select a model, fill in your API key, enter information in the Input field or upload images, click Generate, and the results will be displayed in the Output section.',
-    'zh-CN': '打开应用页面，查看描述和example展示，选择模型，填写 api key，在 Input 中输入信息，或者上传图片，点击 Generate，Output 中将显示结果。',
+    'zh-CN': '打开应用页面，查看描述和 Example 展示，选择模型，填写 API Key，在 Input 中输入信息，或者上传图片，点击 Generate，AI 模型生成的结果将在 Output 中显示。',
     'ja-JP': 'アプリページを開き、説明と例を確認し、モデルを選択し、API キーを入力し、Input フィールドに情報を入力するか画像をアップロードし、Generate をクリックすると、結果が Output セクションに表示されます。',
   },
   'note-api-key': {
@@ -64,25 +63,25 @@ export const content = {
     'zh-CN': '推荐体验的 AI 应用：',
     'ja-JP': 'おすすめの AI アプリ：',
   },
-  'appcard-chat-assistant-title': {
-    'en': 'AI Chat Assistant',
-    'zh-CN': 'AI 聊天助手',
-    'ja-JP': 'AI チャットアシスタント',
+  'appcard-travel-destination-recommender-title': {
+    'en': 'Travel Destination Recommender',
+    'zh-CN': '旅行目的地推荐',
+    'ja-JP': '旅行先のおすすめ',
   },
-  'appcard-chat-assistant-desc': {
-    'en': 'Intelligent conversation partner that can help with various tasks and answer questions.',
-    'zh-CN': '智能对话伙伴，可以帮助处理各种任务并回答问题。',
-    'ja-JP': '様々なタスクを支援し、質問に答えることができるインテリジェントな会話パートナー。',
+  'appcard-travel-destination-recommender-desc': {
+    'en': 'Get a personalized travel destination recommendation, complete with location details, reasons for the suggestion, and visa-free information based on your passport country.',
+    'zh-CN': '根据你的护照国家，获取个性化的旅行目的地推荐，包括地点详情、推荐理由、签证免费信息等。',
+    'ja-JP': 'パスポートの国に基づいて、個性化された旅行先のおすすめを取得。場所の詳細、おすすめの理由、ビザフリー情報などが含まれます。',
   },
   'appcard-image-generator-title': {
-    'en': 'AI Image Generator',
-    'zh-CN': 'AI 图像生成器',
-    'ja-JP': 'AI 画像生成器',
+    'en': 'Pop Toy Packaging Generator',
+    'zh-CN': 'Pop 玩具包装生成器',
+    'ja-JP': 'Pop おもちゃの包装生成器',
   },
   'appcard-image-generator-desc': {
-    'en': 'Create stunning images from text descriptions using advanced AI models.',
-    'zh-CN': '使用先进的 AI 模型从文本描述创建令人惊叹的图像。',
-    'ja-JP': '高度な AI モデルを使用してテキスト説明から素晴らしい画像を作成。',
+    'en': 'Turn your 3D chibi figures into professional blind box-style packaging photos, powered by the same model behind GPT-4o.',
+    'zh-CN': '将你的 3D 小人变成专业的盲盒包装照片，使用与 GPT-4o 一样的图片生成模型。',
+    'ja-JP': '3D 小人をプロのブラインドボックススタイルの包装写真に変える、GPT-4o と同じモデルを使用します。',
   },
   'p-explore-community-description': {
     'en': 'Discover thousands of AI applications created by the community. Find inspiration, learn from others, and explore the latest AI innovations.',
@@ -172,20 +171,20 @@ export const sections = [
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
   <AppCard
-    title={i('appcard-chat-assistant-title')}
-    description={i('appcard-chat-assistant-desc')}
-    icon={<ChatBubbleIcon className="h-6 w-6 text-blue-600" />}
+    title={i('appcard-travel-destination-recommender-title')}
+    description={i('appcard-travel-destination-recommender-desc')}
+    icon={<div className="bg-[#ffe7c2] w-full h-full block text-5xl flex items-center justify-center">🌋</div>}
     provider="Gemini"
-    href="/apps/chat-assistant"
-    tags={['Text Generation', 'Conversation']}
+    href="https://poplab.ai/apps/tankLav4UxUzDEIvCyAfZ"
+    tags={['Travel', 'Recommendation']}
   />
   <AppCard
     title={i('appcard-image-generator-title')}
     description={i('appcard-image-generator-desc')}
-    icon={<ShapesIcon className="h-6 w-6 text-purple-600" />}
+    icon={<img src="https://cdn.poplab.ai/tankyO0Y6KJsw1tHFbK30/app-icon.png" className="h-full w-full" />}
     provider="OpenAI"
-    href="/apps/image-generator"
-    tags={['Image Generation', 'Creative']}
+    href="https://poplab.ai/apps/tankyO0Y6KJsw1tHFbK30"
+    tags={['Image Generation', 'Figure']}
   />
 </div>
 
@@ -193,8 +192,8 @@ export const sections = [
 
 {p('p-explore-community-description')}
 
-<div className="my-6">
-  <Button href="/popbox" arrow="right">
+<div className="not-prose my-6">
+  <Button href="https://poplab.ai/popbox" arrow="right">
     {i('button-go-to-popbox')}
   </Button>
 </div>
