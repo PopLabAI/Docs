@@ -1,0 +1,89 @@
+import { t, Translations } from '@/lib/translations'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { AppCard } from '@/components/AppCard'
+import { ShapesIcon } from '@/components/icons/ShapesIcon'
+import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
+import { CopyIcon } from '@/components/icons/CopyIcon'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+import { Note } from '@/components/mdx'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'Create App with AI',
+    'zh-CN': 'AI 创建应用',
+    'ja-JP': 'AI でアプリ作成',
+  },
+   'metadata-description': {
+    'en': 'Get started with PopLab AI - Learn how to try AI apps, explore the community, create apps with AI, and share your creations.',
+    'zh-CN': '开始使用 PopLab AI - 学习如何体验 AI 应用、探索社区、使用 AI 创建应用并分享你的作品。',
+    'ja-JP': 'PopLab AI を始めましょう - AI アプリの体験、コミュニティの探索、AI を使ったアプリ作成、作品の共有方法を学びます。',
+  },
+  'p-description': {
+    'en': 'Create your AI apps with AI, in 1 minute.',
+    'zh-CN': '您的 AI 应用也能使用 AI 来创建，1 分钟内实现你的创意。',
+    'ja-JP': 'AI を使用して AI アプリを作成、1 分で実現します。',
+  },
+  'p-description-2': {
+    'en': 'If you have an idea that you want to implement with AI, PopLab AI might be the best choice for you. Unlike other AI app building platforms, PopLab AI focuses on providing the simplest and fastest AI app creation experience for users.',
+    'zh-CN': '如果你有一个想法，希望能用 AI 来实现，那么 PopLab AI 可能是你最好的选择。与其他 AI 应用构建平台不同，PopLab AI 专注在为用户最简单最快速的 AI 应用创建体验。',
+    'ja-JP': 'AI を使用して AI アプリを作成、1 分で実現します。',
+  },
+  'h2-how-to-create-app-with-ai': {
+    'en': 'How to Create App with AI',
+    'zh-CN': '如何使用 AI 创建应用',
+    'ja-JP': 'AI を使用してアプリを作成する方法',
+  },
+  'p-how-to-create-app-with-ai': {  
+    'en': ['Currently, there are two ways to create apps with AI: one is the Create module on the home page, and the other is the "Create App with AI" button in the top right corner of the app creation page. Both provide an entry for creating apps with AI.',
+      'You can input any content related to your idea, such as requirements, prompts, or even a random word, and AI will generate an app based on your input.',
+      'After clicking the "Create" button, wait a few seconds to several tens of seconds, the PopLab AI App engine will return the app form information, check the form information carefully, and click the "Create" button to complete the app creation.'
+    ],
+    'zh-CN': ['目前 AI 创建应用有两个入口，一个是首页创建模块，另一个是应用创建页面右上角，都提供了 Create App with AI 的入口。','在 AI 输入框中可以输入任何与你想法有关的内容，比如需求描述、提示词、甚至一个随机单词，AI 都会根据你的输入生成一个应用。','点击创建按钮后，稍等几秒到几十秒，PopLab AI App 引擎将会返回应用表单信息，核对表单信息无误后，点击创建按钮，即可完成应用创建。'],
+    'ja-JP': ['現在、AI を使用してアプリを作成する方法は 2 つあります。1 つはホームページの作成モジュール、もう 1 つはアプリ作成ページの右上隅の "AI を使用してアプリを作成" ボタンです。どちらも AI を使用してアプリを作成するためのエントリーを提供します。',
+      'AI 入力ボックスには、要件、プロンプト、またはランダムな単語など、アイデアに関連するコンテンツを入力できます。AI は、入力に基づいてアプリを生成します。',
+      '「作成」ボタンをクリックすると、数秒から数十秒待ちます。PopLab AI App エンジンは、アプリのフォーム情報を返します。フォーム情報を確認し、「作成」ボタンをクリックしてアプリの作成を完了します。'
+    ],
+  },
+ 
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  if (Array.isArray(i(key))) {
+    return i(key).map((item, index) => <p key={index}>{item}</p>)
+  }
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [  
+]
+
+{/* Start of Page */}
+
+# {i('title')}
+<div className="lead">
+  {p('p-description')}
+</div>
+
+{p('p-description-2')}
+
+## {i('h2-how-to-create-app-with-ai')}
+{p('p-how-to-create-app-with-ai')}
+
+![home page create app](/content/createappwithai/home-page-create-app.png)
+![ai dialog loading](/content/createappwithai/ai-dialog-loading.png)
+![app page](/content/createappwithai/app-page.png)

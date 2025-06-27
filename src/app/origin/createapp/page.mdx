@@ -1,0 +1,309 @@
+import { t, Translations } from '@/lib/translations'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { AppCard } from '@/components/AppCard'
+import { ShapesIcon } from '@/components/icons/ShapesIcon'
+import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
+import { CopyIcon } from '@/components/icons/CopyIcon'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+import { Note } from '@/components/mdx'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'Create App',
+    'zh-CN': '创建应用',
+    'ja-JP': 'アプリ作成',
+  },
+  'metadata-description': {
+    'en': 'Get started with PopLab AI - Learn how to try AI apps, explore the community, create apps with AI, and share your creations.',
+    'zh-CN': '开始使用 PopLab AI - 学习如何体验 AI 应用、探索社区、使用 AI 创建应用并分享你的作品。',
+    'ja-JP': 'PopLab AI を始めましょう - AI アプリの体験、コミュニティの探索、AI を使ったアプリ作成、作品の共有方法を学びます。',
+  },
+  'p-description': {
+    'en': 'Create your own lightweight AI apps, no code, no deployment, share your prompts as apps.',
+    'zh-CN': '轻松创建自己的轻量级 AI 应用，无需写代码，无需部署，将您的 Prompt 变为可分享的应用。',
+    'ja-JP': '軽量な AI アプリを作成できます。コードを書くことなく、デプロイすることなく、プロンプトを共有可能なアプリを作成できます。',
+  },
+  'h2-what-is-lightweight-ai-app': {
+    'en': 'What is Lightweight AI App',
+    'zh-CN': '什么是轻量级 AI 应用',
+    'ja-JP': '軽量な AI アプリとは',
+  },
+  'p-what-is-lightweight-ai-app': {
+    'en': [
+      'Lightweight AI App, as the name suggests, is an AI app that does not require technical architecture, code logic, and only requires a form input in the front end, and the back end processes the business logic through a prompt and a suitable AI model. Currently, lightweight AI apps can handle most of the daily life and professional needs in the text, image, and audio-video fields.',
+      'The prompts shared and collected by everyone can be modified to become a general prompt, and such scenarios can be created using PopLab AI\'s lightweight AI app engine.',
+    ],
+    'zh-CN': [
+      '轻量级 AI 应用，顾名思义，就是不需要考虑技术架构，代码逻辑，只需要在前端提供一个输入表单，后端通过提示词搭配合适的 AI 模型来处理业务逻辑，这就是一个轻量 AI 应用了。目前在文本、图片、音视频领域，轻量 AI 应用已经可以胜任日常生活与专业领域的大部份需求。',
+      '大家日常分享和收集的 AI 提示词，大多都可以通过修改其中部份内容，来变成一个通用的提示词，这样的场景就可以通过使用 PopLab AI 的轻量 AI 应用引擎来创建 AI 应用了。'
+    ],
+    'ja-JP': [
+      '軽量な AI アプリは、名前が示すように、技術的なアーキテクチャ、コードロジックを必要とせず、フロントエンドで入力フォームを提供するだけで、バックエンドはプロンプトと適切な AI モデルを使用してビジネスロジックを処理します。現在、軽量 AI アプリは、テキスト、画像、音声ビデオ領域で日常生活と専門分野のほとんどの要件を満たすことができます。',
+      '多くの人が共有して収集した AI プロンプトは、その一部を変更することで、一般的なプロンプトに変えることができます。このようなシナリオは、PopLab AI の軽量 AI アプリエンジンを使用して作成できます。',
+    ],
+  },
+  'h2-how-to-create-ai-app': {
+    'en': 'How to Create AI App',
+    'zh-CN': '如何创建 AI 应用',
+    'ja-JP': 'AI アプリの作成方法',
+  },
+  'note-how-to-create-ai-app-title': {
+    'en': 'Recommend create apps with AI',
+    'zh-CN': '推荐使用 AI 自动创建应用功能',
+    'ja-JP': 'AI を使用してアプリを作成することをお勧めします',
+  },
+  'note-how-to-create-ai-app-description': {
+    'en': 'PopLab AI has a built-in AI to create apps, just input your idea or prompt, and the AI will automatically generate the app related information and complete the input in the creation page, reducing the steps of manually filling in the form.',
+    'zh-CN': '推荐您使用 PopLab AI 平台中自带的 AI 创建应用功能，只需要输入您的 idea 或提示词，即可自动生成 App 相关的信息并且在创建页面中完成输入，减少人工填写表单的步骤。',
+    'ja-JP': 'PopLab AI には、アプリを作成するための組み込み AI があります。アイデアやプロンプトを入力するだけで、AI が自動的にアプリ関連情報を生成し、作成ページで入力を完了するため、フォームの手動入力の手順を削減します。',
+  },
+  'link-create-app-with-ai': {
+    'en': 'Create App with AI',
+    'zh-CN': '使用 AI 创建应用',
+    'ja-JP': 'AI を使用してアプリを作成する',
+  },
+  'h3-how-to-create-ai-app-1': {
+    'en': '1. Create an account on PopLab AI.',
+    'zh-CN': '1. 登录账号',
+    'ja-JP': '1. PopLab AI にアカウントを作成します。',
+  },
+  'p-how-to-create-ai-app-1': {
+    'en': 'Login with Google account or email, login and registration are automatically completed, and you need to apply for participation in the internal test during the internal test period.',
+    'zh-CN': '使用 Google 账号或邮箱登录平台，如第一次使用会自动注册，内测期间需申请参与内测才可以登录。',
+    'ja-JP': 'Google アカウントまたはメールアドレスでログインします。初めて使用する場合は自動的に登録されます。内部テスト期間中は、内部テストに参加するために申請する必要があります。',
+  },
+  'h3-how-to-create-ai-app-2': {
+    'en': '2. Enter the create app page',
+    'zh-CN': '2. 进入创建应用页面',
+    'ja-JP': '2. アプリ作成ページに移動します',
+  },
+  'p-how-to-create-ai-app-2': {
+    'en': 'Click the "Create App" button in the top right corner, or click the "Create App" button in the "My Apps" page.',
+    'zh-CN': '点击右上角的 "创建应用" 按钮，或点击 "我的应用" 页面中的 "创建应用" 按钮。',
+    'ja-JP': '右上の "アプリ作成" ボタンをクリックするか、"My Apps" ページの "アプリ作成" ボタンをクリックします。',
+  },
+  'h3-how-to-create-ai-app-3': {
+    'en': '3. Fill in the app information',
+    'zh-CN': '3. 填写应用信息',
+    'ja-JP': '3. アプリ情報を入力します',
+  },
+  'p-how-to-create-ai-app-3': {
+    'en': 'Fill in the app name, description, app icon, and other information, configure an input form for the app, input the most important app prompt, display the example output of the app, and select an appropriate AI model.',
+    'zh-CN': '填写应用名称、描述、应用图标等应用信息，为应用配置一个输入表单，输入最关键的应用提示词，展示 App 的示例输出，选择合适的 AI 模型。',
+    'ja-JP': 'アプリ名、説明、アプリアイコンなどのアプリ情報を入力します。アプリに入力フォームを設定し、最も重要なアプリプロンプトを入力し、アプリのサンプル出力を表示し、適切な AI モデルを選択します。',
+  },
+  'h3-how-to-create-ai-app-4': {
+    'en': '4. Create the app',
+    'zh-CN': '4. 创建应用',
+    'ja-JP': '4. アプリを作成します',
+  },
+  'p-how-to-create-ai-app-4': {
+    'en': 'Click the "Create" button, and the app will be created.',
+    'zh-CN': '点击 "创建" 按钮，应用创建成功。',
+    'ja-JP': '"作成" ボタンをクリックすると、アプリが作成されます。',
+  },
+  'h2-app-create-form': {
+    'en': 'App Create Form',
+    'zh-CN': '应用创建表单',
+    'ja-JP': 'アプリ作成フォーム',
+  },
+  'h3-app-create-form-base': {
+    'en': 'Base Information',
+    'zh-CN': '基础信息',
+    'ja-JP': '基本情報',
+  },
+  'p-app-create-form-base': {
+    'en': 'Fill in the app name, description, app icon, and other information. Note that if the Access permission is set to Public, the app can be accessed by anyone.',
+    'zh-CN': '填写应用名称、描述、应用图标等应用信息。注意如果 Access 权限设置为 Public，该应用将可以被任何人访问。',
+    'ja-JP': 'アプリ名、説明、アプリアイコンなどのアプリ情報を入力します。アクセス権限が Public に設定されている場合、誰でもアプリにアクセスできます。',
+  },
+  'h3-app-create-form-input-form': {
+    'en': 'Input Form Builder',
+    'zh-CN': '输入表单构建器',
+    'ja-JP': '入力フォームビルダー',
+  },
+  'p-app-create-form-input-form': {
+    'en': [
+      'Configure an input form for the app, input the most important app prompt, display the example output of the app, and select an appropriate AI model.',
+      'Currently, the input form supports the following input types:',
+      <ul>
+        <li>Short Text 短文本输入</li>
+        <li>Long Text 长文本输入</li>
+        <li>Dropdown List 下拉列表输入</li>
+        <li>Single Choice 单选输入</li>
+        <li>Multi Choice 多选输入</li>
+        <li>Image Upload 图片上传</li>
+      </ul>,
+      'Most application scenarios can be satisfied with these components, if you need more complex input, please contact us for evaluation.'
+    ],
+    'zh-CN':[
+      '为应用配置一个应用在运行时所需的输入信息表单，表单中输入的内容可动态插入到发送给 AI 模型的提示词中，在提示词输入框中可控制输入变量插入的位置。如果应用无需输入信息，则无需配置输入表单。',
+      '目前输入表单支持如下输入类型：',
+      <ul>
+        <li>Short Text 短文本输入</li>
+        <li>Long Text 长文本输入</li>
+        <li>Dropdown List 下拉列表输入</li>
+        <li>Single Choice 单选输入</li>
+        <li>Multi Choice 多选输入</li>
+        <li>Image Upload 图片上传</li>
+      </ul>,
+      '大部份应用场景使用这几个组件已经可以满足需求，如果需要更复杂的输入，请联系我们进行评估。'
+    ],
+    'ja-JP': [
+      'アプリに入力フォームを設定し、最も重要なアプリプロンプトを入力し、アプリのサンプル出力を表示し、適切な AI モデルを選択します。',
+      '現在、入力フォームは以下の入力タイプをサポートしています：',
+      <ul>
+        <li>Short Text 短文本入力</li>
+        <li>Long Text 長文本入力</li>
+        <li>Dropdown List ドロップダウンリスト入力</li>
+        <li>Single Choice 単一選択入力</li>
+        <li>Multi Choice 複数選択入力</li>
+        <li>Image Upload 画像アップロード</li>
+      </ul>,
+        '大部份のアプリケーションシナリオは、これらのコンポーネントで満たすことができます。より複雑な入力が必要な場合は、評価のためにお問い合わせください。'
+    ],
+  },
+  'h3-app-create-form-prompt': {
+    'en': 'Prompt',
+    'zh-CN': '提示词',
+    'ja-JP': 'プロンプト',
+  },
+  'p-app-create-form-prompt': {
+    'en': 'Input the most important app prompt, and the app will use this prompt to generate the output.',
+    'zh-CN': '输入最关键的应用提示词，应用将使用该提示词生成输出。',
+    'ja-JP': '最も重要なアプリプロンプトを入力し、アプリはこのプロンプトを使用して出力を生成します。',
+  },
+  'h3-app-create-form-output': {
+    'en': 'Output Type',
+    'zh-CN': '输出类型',
+    'ja-JP': '出力タイプ',
+  },
+  'p-app-create-form-output': {
+    'en': 'Display the example output of the app.',
+    'zh-CN': '展示 App 的示例输出。',
+    'ja-JP': 'アプリのサンプル出力を表示します。',
+  },
+  'h3-app-create-form-models': {
+    'en': 'Models',
+    'zh-CN': '模型',
+    'ja-JP': 'モデル',
+  },
+  'p-app-create-form-models': {
+    'en': 'Select an appropriate AI model.',
+    'zh-CN': '选择合适的 AI 模型。',
+    'ja-JP': '適切な AI モデルを選択します。',
+  },
+  'h3-app-create-form-tips': {
+    'en': 'Tips',
+    'zh-CN': '提示',
+    'ja-JP': 'ヒント',
+  },
+  'p-app-create-form-tips': {
+    'en': 'Tips for creating apps.',
+    'zh-CN': '创建应用的提示。',
+    'ja-JP': 'アプリ作成のヒント。',
+  },
+   'h3-app-create-form-emoji': {
+    'en': 'Emoji',
+    'zh-CN': '表情',
+    'ja-JP': '絵文字',
+  },
+  'p-app-create-form-emoji': {
+    'en': 'Select an appropriate emoji.',
+    'zh-CN': '选择合适的表情。',
+    'ja-JP': '適切な絵文字を選択します。',
+  },
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  if (Array.isArray(i(key))) {
+    return i(key).map((item, index) => <p key={index}>{item}</p>)
+  }
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [
+]
+
+{/* Start of Page */}
+
+# {i('title')}
+<div className="lead">
+  {p('p-description')}
+</div>
+
+## {i('h2-what-is-lightweight-ai-app')}
+{p('p-what-is-lightweight-ai-app')}
+
+## {i('h2-how-to-create-ai-app')}
+<div className="relative start-5">
+  <div className='mt-[-10px]'>
+  ### {i('h3-how-to-create-ai-app-1')}
+  {p('p-how-to-create-ai-app-1')}
+  </div>
+  <div className='mt-[-10px]'>
+  ### {i('h3-how-to-create-ai-app-2')}
+  {p('p-how-to-create-ai-app-2')}
+  </div>
+  <div className='mt-[-10px]'>
+  ### {i('h3-how-to-create-ai-app-3')}
+  {p('p-how-to-create-ai-app-3')}
+  </div>
+  <div className='mt-[-10px]'>
+  ### {i('h3-how-to-create-ai-app-4')}
+  {p('p-how-to-create-ai-app-4')}
+  </div>
+</div>
+<Note title={i('note-how-to-create-ai-app-title')}>
+  {i('note-how-to-create-ai-app-description')}
+  [{i('link-create-app-with-ai')} →](https://poplab.ai/origin/createappwithai)
+</Note>
+
+## {i('h2-app-create-form')}
+### {i('h3-app-create-form-base')}
+{p('p-app-create-form-base')}
+![app create form base](/content/createappwithai/app-create-form-base.png)
+
+### {i('h3-app-create-form-input-form')}
+{p('p-app-create-form-input-form')}
+![app create form formbuilder initial](/content/createappwithai/app-create-form-formbuilder-init.png)
+![app create form formbuilder](/content/createappwithai/app-create-form-formbuilder.png)
+
+
+### {i('h3-app-create-form-prompt')}
+{p('p-app-create-form-prompt')}
+![app create form prompt](/content/createappwithai/app-create-form-prompt.png)
+
+### {i('h3-app-create-form-output')}
+{p('p-app-create-form-output')}
+![app create form output](/content/createappwithai/app-create-form-output.png)
+
+### {i('h3-app-create-form-models')}
+{p('p-app-create-form-models')}
+![app create form models 1](/content/createappwithai/app-create-form-models-1.png)
+![app create form models 2](/content/createappwithai/app-create-form-models-2.png)
+
+### {i('h3-app-create-form-tips')}
+{p('p-app-create-form-tips')}
+![app create form tips](/content/createappwithai/app-create-form-tips.png)
+
+### {i('h3-app-create-form-emoji')}
+{p('p-app-create-form-emoji')}
+![app create form emoji](/content/createappwithai/app-create-form-emoji.png)
+
+

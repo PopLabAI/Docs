@@ -9,6 +9,15 @@ export const a = Link
 export { Button } from '@/components/Button'
 export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
 
+export function img(props: React.ComponentPropsWithoutRef<'img'>) {
+  return (
+    <img
+      {...props}
+      className="rounded-lg border-[0.5px] border-zinc-200 shadow-md dark:border-zinc-700 dark:shadow-zinc-900/20 dark:opacity-92 dark:hover:opacity-100 transition-all"
+    />
+  )
+}
+
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (
     <article className="flex h-full flex-col pt-16 pb-10">
