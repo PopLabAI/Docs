@@ -38,42 +38,42 @@ function getNavigation(locale: string): Array<NavGroup> {
       links: [
         { title: isZh ? '欢迎使用' : isJa ? 'へようこそ' : 'Welcome', href: `${prefix}` },
         { title: isZh ? '快速开始' : isJa ? 'クイックスタート' : 'Quickstart', href: `${prefix}/quickstart` },
+        // { title: isZh ? '使用应用' : isJa ? 'アプリ体験' : 'Play App', href: '#' },
         { title: isZh ? 'AI 创建应用' : isJa ? 'AI でアプリ作成' : 'Create App with AI', href: `${prefix}/createappwithai` },
-        { title: isZh ? '创建应用' : isJa ? 'アプリ作成' : 'Create App', href: '/createapp' },
-        { title: isZh ? '体验应用' : isJa ? 'アプリ体験' : 'Play App', href: '#' },
-        { title: isZh ? '分享应用' : isJa ? 'アプリ共有' : 'Share App', href: '#' },
-        { title: isZh ? '历史记录' : isJa ? '履歴記録' : 'History Records', href: '#' },
-        { title: isZh ? '更新日志' : isJa ? '変更履歴' : 'Changelog', href: '#' },
-        { title: isZh ? '支持' : isJa ? 'サポート' : 'Support', href: '#' },
+        { title: isZh ? '创建应用' : isJa ? 'アプリ作成' : 'Create App', href: `${prefix}/createapp` },
+        // { title: isZh ? '分享应用' : isJa ? 'アプリ共有' : 'Share App', href: '#' },
+        // { title: isZh ? '历史记录' : isJa ? '履歴記録' : 'History Records', href: '#' },
+        // { title: isZh ? '更新日志' : isJa ? '変更履歴' : 'Changelog', href: '#' },
+        // { title: isZh ? '支持' : isJa ? 'サポート' : 'Support', href: '#' },
       ],
     },
-    {
-      title: 'PopBox',
-      links: [
-        { title: isZh ? '介绍' : isJa ? '紹介' : 'Introduction', href: '#' },
-        { title: isZh ? '集合' : isJa ? 'コレクション' : 'Collections', href: '#' },
-        { title: isZh ? '社区' : isJa ? 'コミュニティ' : 'Community', href: '#' },
-      ],
-    },
-    {
-      title: isZh ? 'AI 模型' : isJa ? 'AI モデル' : 'AI Models',
-      links: [
-        { title: isZh ? '支持的 AI 模型' : isJa ? '対応 AI モデル' : 'Supported AI Models', href: '#' },
-        { title: isZh ? 'API 密钥管理' : isJa ? 'API キー管理' : 'API Key Management', href: '#' },
-        { title: 'Gemini API', href: '#' },
-        { title: 'OpenAI API', href: '#' },
-        { title: 'Anthropic API', href: '#' },
-        { title: 'DeepSeek API', href: '#' },
-      ],
-    },
-    {
-      title: isZh ? '开源' : isJa ? 'オープンソース' : 'Open Source',
-      links: [
-        { title: isZh ? '部署' : isJa ? 'デプロイ' : 'Deploy', href: '#' },
-        { title: isZh ? 'Docker 镜像' : isJa ? 'Docker イメージ' : 'Docker Image', href: '#' },
-        { title: isZh ? '开发' : isJa ? '開発' : 'Develop', href: '#' },
-      ],
-    },
+    // {
+    //   title: 'PopBox',
+    //   links: [
+    //     { title: isZh ? '介绍' : isJa ? '紹介' : 'Introduction', href: '#' },
+    //     { title: isZh ? '集合' : isJa ? 'コレクション' : 'Collections', href: '#' },
+    //     { title: isZh ? '社区' : isJa ? 'コミュニティ' : 'Community', href: '#' },
+    //   ],
+    // },
+    // {
+    //   title: isZh ? 'AI 模型' : isJa ? 'AI モデル' : 'AI Models',
+    //   links: [
+    //     { title: isZh ? '支持的 AI 模型' : isJa ? '対応 AI モデル' : 'Supported AI Models', href: '#' },
+    //     { title: isZh ? 'API 密钥管理' : isJa ? 'API キー管理' : 'API Key Management', href: '#' },
+    //     { title: 'Gemini API', href: '#' },
+    //     { title: 'OpenAI API', href: '#' },
+    //     { title: 'Anthropic API', href: '#' },
+    //     { title: 'DeepSeek API', href: '#' },
+    //   ],
+    // },
+    // {
+    //   title: isZh ? '开源' : isJa ? 'オープンソース' : 'Open Source',
+    //   links: [
+    //     { title: isZh ? '部署' : isJa ? 'デプロイ' : 'Deploy', href: '#' },
+    //     { title: isZh ? 'Docker 镜像' : isJa ? 'Docker イメージ' : 'Docker Image', href: '#' },
+    //     { title: isZh ? '开发' : isJa ? '開発' : 'Develop', href: '#' },
+    //   ],
+    // },
   ]
 }
 

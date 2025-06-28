@@ -129,8 +129,8 @@ export const content = {
   },
   'p-app-create-form-input-form': {
     'en': [
-      'Configure an input form for the app, input the most important app prompt, display the example output of the app, and select an appropriate AI model.',
-      'Currently, the input form supports the following input types:',
+      <p>Configure an input form for the app, input the most important app prompt, display the example output of the app, and select an appropriate AI model.</p>,
+      <p>Currently, the input form supports the following input types:</p>,
       <ul>
         <li>Short Text 短文本输入</li>
         <li>Long Text 长文本输入</li>
@@ -139,11 +139,11 @@ export const content = {
         <li>Multi Choice 多选输入</li>
         <li>Image Upload 图片上传</li>
       </ul>,
-      'Most application scenarios can be satisfied with these components, if you need more complex input, please contact us for evaluation.'
+      <p>Most application scenarios can be satisfied with these components, if you need more complex input, please contact us for evaluation.</p>
     ],
     'zh-CN':[
-      '为应用配置一个应用在运行时所需的输入信息表单，表单中输入的内容可动态插入到发送给 AI 模型的提示词中，在提示词输入框中可控制输入变量插入的位置。如果应用无需输入信息，则无需配置输入表单。',
-      '目前输入表单支持如下输入类型：',
+      <p>为应用配置一个应用在运行时所需的输入信息表单，表单中输入的内容可动态插入到发送给 AI 模型的提示词中，在提示词输入框中可控制输入变量插入的位置。如果应用无需输入信息，则无需配置输入表单。</p>,
+      <p>目前输入表单支持如下输入类型：</p>,
       <ul>
         <li>Short Text 短文本输入</li>
         <li>Long Text 长文本输入</li>
@@ -152,11 +152,11 @@ export const content = {
         <li>Multi Choice 多选输入</li>
         <li>Image Upload 图片上传</li>
       </ul>,
-      '大部份应用场景使用这几个组件已经可以满足需求，如果需要更复杂的输入，请联系我们进行评估。'
+      <p>大部份应用场景使用这几个组件已经可以满足需求，如果需要更复杂的输入，请联系我们进行评估。</p>
     ],
     'ja-JP': [
-      'アプリに入力フォームを設定し、最も重要なアプリプロンプトを入力し、アプリのサンプル出力を表示し、適切な AI モデルを選択します。',
-      '現在、入力フォームは以下の入力タイプをサポートしています：',
+      <p>アプリに入力フォームを設定し、最も重要なアプリプロンプトを入力し、アプリのサンプル出力を表示し、適切な AI モデルを選択します。</p>,
+      <p>現在、入力フォームは以下の入力タイプをサポートしています：</p>,
       <ul>
         <li>Short Text 短文本入力</li>
         <li>Long Text 長文本入力</li>
@@ -165,7 +165,7 @@ export const content = {
         <li>Multi Choice 複数選択入力</li>
         <li>Image Upload 画像アップロード</li>
       </ul>,
-        '大部份のアプリケーションシナリオは、これらのコンポーネントで満たすことができます。より複雑な入力が必要な場合は、評価のためにお問い合わせください。'
+      <p>大部份のアプリケーションシナリオは、これらのコンポーネントで満たすことができます。より複雑な入力が必要な場合は、評価のためにお問い合わせください。</p>
     ],
   },
   'p-app-create-form-input-form-actions-title': {
@@ -259,9 +259,9 @@ export const content = {
     'ja-JP': '使用ヒント',
   },
   'p-app-create-form-tips': {
-    'en': 'Add extra application instructions for users. For example, application application scenarios, usage methods, etc.',
-    'zh-CN': '为 App 使用者添加额外的应用说明，例如应用的适用场景、使用方法等。',
-    'ja-JP': 'ユーザーに追加のアプリケーション説明を追加します。たとえば、アプリの適用シナリオ、使用方法など。',
+    'en': 'Add extra application instructions for users. For example, application application scenarios, usage methods, etc. Support Markdown format, click the "Preview Markdown" button below the text box to preview the effect.',
+    'zh-CN': '为 App 使用者添加额外的应用说明，例如应用的适用场景、使用方法等。支持使用 Markdown 格式，点击文本框下方的 "Preview Markdown" 按钮可预览效果。',
+    'ja-JP': 'ユーザーに追加のアプリケーション説明を追加します。たとえば、アプリの適用シナリオ、使用方法など。Markdown 形式をサポートし、テキストボックスの下の "Preview Markdown" ボタンをクリックして、効果をプレビューできます。',
   },
    'h3-app-create-form-emoji': {
     'en': 'Emoji Icon',
@@ -269,9 +269,18 @@ export const content = {
     'ja-JP': '絵文字アイコン',
   },
   'p-app-create-form-emoji': {
-    'en': 'If no suitable application icon is available, it is strongly recommended to use emoji icons instead. If the application does not set an image, a random emoji icon will be generated for display.',
-    'zh-CN': '如果暂无合适的应用图标，强烈推荐为应用设置一个表情图标。如果应用未设置图片，系统也会随机生成一个表情图标用于展示。',
-    'ja-JP': '適切なアプリケーションアイコンがない場合は、絵文字アイコンを使用することを強くお勧めします。アプリケーションに画像が設定されていない場合は、ランダムに生成された絵文字アイコンが表示されます。',
+    'en': [
+      'If no suitable application icon is available, it is strongly recommended to use emoji icons instead. If the application does not set an image, a random emoji icon will be generated for display.',
+      'Note that applications using Emoji icons will use the PopLab AI official icon when installed on the phone desktop. Applications using image icons can display image icons on the desktop.'
+    ],
+    'zh-CN': [
+      '如果暂无合适的应用图标，强烈推荐为应用设置一个表情图标。如果应用未设置图片，系统也会随机生成一个表情图标用于展示。',
+      '注意，使用 Emoji 图标应用在安装到手机桌面的时候将使用 PopLab AI 官方 Icon，使用图片图标的则可以在桌面上显示图片图标'
+    ],
+    'ja-JP': [
+      '適切なアプリケーションアイコンがない場合は、絵文字アイコンを使用することを強くお勧めします。アプリケーションに画像が設定されていない場合は、ランダムに生成された絵文字アイコンが表示されます。',
+      '注意、Emoji アイコンを使用したアプリケーションは、デスクトップにインストールすると PopLab AI の公式アイコンが使用されます。画像アイコンを使用したアプリケーションは、デスクトップに画像アイコンが表示されます。'
+    ],
   },
 }
 
@@ -306,7 +315,7 @@ export const sections = [
 {p('p-what-is-lightweight-ai-app')}
 
 ## {i('h2-how-to-create-ai-app')}
-<div className="relative start-5">
+<div className="relative start-3">
   <div className='mt-[-10px]'>
   ### {i('h3-how-to-create-ai-app-1')}
   {p('p-how-to-create-ai-app-1')}
@@ -332,35 +341,35 @@ export const sections = [
 ## {i('h2-app-create-form')}
 ### {i('h3-app-create-form-base')}
 {p('p-app-create-form-base')}
-![app create form base](/content/createappwithai/app-create-form-base.png)
+![app create form base](/content/createapp/app-create-form-base.png)
 
 ### {i('h3-app-create-form-input-form')}
 {i('p-app-create-form-input-form')}
-![app create form formbuilder initial](/content/createappwithai/app-create-form-formbuilder-init.png)
+![app create form formbuilder initial](/content/createapp/app-create-form-formbuilder-init.png)
 
 **{i('p-app-create-form-input-form-actions-title')}**
 {i('p-app-create-form-input-form-actions-list')}
-![app create form formbuilder](/content/createappwithai/app-create-form-formbuilder.png)
+![app create form formbuilder](/content/createapp/app-create-form-formbuilder.png)
 
 ### {i('h3-app-create-form-prompt')}
 {p('p-app-create-form-prompt')}
-![app create form prompt](/content/createappwithai/app-create-form-prompt.png)
+![app create form prompt](/content/createapp/app-create-form-prompt.png)
 
 ### {i('h3-app-create-form-output')}
 {p('p-app-create-form-output')}
-![app create form output](/content/createappwithai/app-create-form-output.png)
+![app create form output](/content/createapp/app-create-form-output.png)
 
 ### {i('h3-app-create-form-models')}
 {p('p-app-create-form-models')}
-![app create form models 1](/content/createappwithai/app-create-form-models-1.png)
-![app create form models 2](/content/createappwithai/app-create-form-models-2.png)
+![app create form models 1](/content/createapp/app-create-form-models-1.png)
+![app create form models 2](/content/createapp/app-create-form-models-2.png)
 
 ### {i('h3-app-create-form-tips')}
 {p('p-app-create-form-tips')}
-![app create form tips](/content/createappwithai/app-create-form-tips.png)
+![app create form tips](/content/createapp/app-create-form-tips.png)
 
 ### {i('h3-app-create-form-emoji')}
 {p('p-app-create-form-emoji')}
-![app create form emoji](/content/createappwithai/app-create-form-emoji.png)
+![app create form emoji](/content/createapp/app-create-form-emoji.png)
 
 
