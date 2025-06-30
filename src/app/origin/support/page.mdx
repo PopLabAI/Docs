@@ -1,0 +1,153 @@
+import { t, Translations } from '@/lib/translations'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { Note } from '@/components/mdx'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'Support',
+    'zh-CN': '支持',
+    'ja-JP': 'サポート',
+  },
+  'metadata-description': {
+    'en': 'Contact PopLab AI - Get support, provide feedback, and explore business opportunities including private deployment and commercial partnerships.',
+    'zh-CN': '联系 PopLab AI - 获取支持、提供反馈并探索包括私有部署和商业合作在内的商机。',
+    'ja-JP': 'PopLab AI にお問い合わせ - サポートの取得、フィードバックの提供、プライベートデプロイメントや商業パートナーシップを含むビジネス機会を探る。',
+  },
+  'section-support': {
+    'en': 'Support',
+    'zh-CN': '技术支持',
+    'ja-JP': 'サポート',
+  },
+  'section-feedback': {
+    'en': 'Feedback',
+    'zh-CN': '反馈',
+    'ja-JP': 'フィードバック',
+  },
+  'section-business': {
+    'en': 'Business Partnerships',
+    'zh-CN': '商务合作',
+    'ja-JP': 'ビジネスパートナーシップ',
+  },
+  'p-page-description': {
+    'en': 'Contact PopLab AI - Get support, provide feedback, and explore business opportunities including private deployment and commercial partnerships.',
+    'zh-CN': '联系 PopLab AI - 获取支持、提供反馈并探索包括私有部署和商业合作在内的商机。',
+    'ja-JP': 'PopLab AI にお問い合わせ - サポートの取得、フィードバックの提供、プライベートデプロイメントや商業パートナーシップを含むビジネス機会を探る。',
+  },
+  'support-description': {
+    'en': 'Need help with PopLab AI? Have technical questions? Reach out to our support team.',
+    'zh-CN': '需要 PopLab AI 的帮助？有技术问题？请联系我们的支持团队。',
+    'ja-JP': 'PopLab AI でお困りですか？技術的な質問がありますか？サポートチームにお問い合わせください。',
+  },
+  'support-email': {
+    'en': 'Email: support@poplab.ai',
+    'zh-CN': '邮箱：support@poplab.ai',
+    'ja-JP': 'メール：support@poplab.ai',
+  },
+  'feedback-description': {
+    'en': 'We\'d love to hear your thoughts on how we can make PopLab AI better. Your feedback helps us improve and build features that matter to you.',
+    'zh-CN': '我们很想听听您对如何改进 PopLab AI 的想法。您的反馈帮助我们改进并构建对您重要的功能。',
+    'ja-JP': 'PopLab AI をより良くするためのご意見をお聞かせください。皆様のフィードバックは、私たちの改善と重要な機能の構築に役立ちます。',
+  },
+  'feedback-button': {
+    'en': 'Share Your Feedback',
+    'zh-CN': '分享您的反馈',
+    'ja-JP': 'フィードバックを共有',
+  },
+  'twitter-description': {
+    'en': <>Follow us on Twitter and share your PopLab AI apps! When you share, don\'t forget to mention our official account <a href="https://x.com/PoplabAI" target="_blank">@PoplabAI</a>.</>,
+    'zh-CN': <>推荐关注我们的推特并分享您的 PopLab AI 应用！当您分享时，别忘了 @ 我们的官方账号 <a href="https://x.com/PoplabAI" target="_blank">@PoplabAI</a>。</>,
+    'ja-JP': <>Twitter でフォローして、PopLab AI アプリをシェアしましょう！シェアする際は、公式アカウント <a href="https://x.com/PoplabAI" target="_blank">@PoplabAI</a> をメンションしてください。</>,
+  },
+  'business-intro': {
+    'en': 'PopLab AI welcomes commercial partnerships. We invite professionals who want to develop AI application platforms in their specialized fields to collaborate with us.',
+    'zh-CN': 'PopLab AI 欢迎商业化合作，想开发自己专业领域 AI 应用平台的朋友可一起交流。',
+    'ja-JP': 'PopLab AI では、専門分野での AI アプリケーションプラットフォーム開発を希望する専門家との商業パートナーシップを歓迎しています。',
+  },
+  'business-fields': {
+    'en': 'Whether you\'re in marketing growth, education, SEO, consulting services, or any other industry - if your industry experience or the AI prompts you\'ve refined are valuable, you can transform them into an industry-specific AI application platform.',
+    'zh-CN': '比如市场增长、教育、SEO、服务咨询等，只要你的行业经验或者你打磨出的 AI 提示词很有价值，你就可以将它们打造为一个行业 AI 应用平台。',
+    'ja-JP': 'マーケティング成長、教育、SEO、コンサルティングサービスなど、あなたの業界経验や洗練された AI プロンプトが価値あるものであれば、それらを業界特化型 AI アプリケーションプラットフォームに変えることができます。',
+  },
+  'business-service': {
+    'en': 'Provide subscription-based AI services to your customers. We currently support private deployment and integration with payment platforms like Stripe for paid services.',
+    'zh-CN': '为客户提供订阅使用的 AI 服务。目前已支持私有部署，可接入 stripe 等支付平台提供收费服务。',
+    'ja-JP': '顧客にサブスクリプション型 AI サービスを提供。現在、プライベートデプロイメントをサポートしており、Stripe などの決済プラットフォームと連携して有料サービスを提供できます。',
+  },
+  'business-vision': {
+    'en': 'Prompt is the core of AI products. As model capabilities gradually strengthen, AI products themselves will only become simpler. PopLab AI helps you start a business with zero code.',
+    'zh-CN': 'Prompt 是 AI 产品的核心，随着模型能力逐渐增强，AI 产品本身只会越来越简单，PopLab AI 助您零代码创业。',
+    'ja-JP': 'プロンプトは AI 製品の核心です。モデルの能力が徐々に向上するにつれて、AI 製品自体はより簡単になります。PopLab AI はゼロコードでのビジネス開始をサポートします。',
+  },
+  'business-contact': {
+    'en': 'For business inquiries, please contact: tank@poplab.ai',
+    'zh-CN': '邮件联系：tank@poplab.ai',
+    'ja-JP': 'ビジネスに関するお問い合わせ：tank@poplab.ai',
+  },
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  if (Array.isArray(key)) {
+    return key.map((k) => <p>{i(k)}</p>)
+  }
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [
+  { title: i('section-support'), id: 'support' },
+  { title: i('section-feedback'), id: 'feedback' },
+  { title: i('section-business'), id: 'business' },
+]
+
+{/* Start of Page */}
+
+# {i('title')}
+<div className="lead">
+  {p('p-page-description')}
+</div>
+
+## {i('section-support')}
+
+{p('support-description')}
+
+**{i('support-email')}**
+
+## {i('section-feedback')}
+
+{p('feedback-description')}
+
+<div className="not-prose my-6">
+  <Button href="https://tally.so/r/n0YjyB" arrow="right">
+    {i('feedback-button')}
+  </Button>
+</div>
+
+<Note>
+{p('twitter-description')}
+</Note>
+
+## {i('section-business')}
+
+{p('business-intro')}
+
+{p('business-fields')}
+
+{p('business-service')}
+
+{p('business-vision')}
+
+**{i('business-contact')}**
+
+

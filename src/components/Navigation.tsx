@@ -44,7 +44,7 @@ function getNavigation(locale: string): Array<NavGroup> {
         // { title: isZh ? '分享应用' : isJa ? 'アプリ共有' : 'Share App', href: '#' },
         // { title: isZh ? '历史记录' : isJa ? '履歴記録' : 'History Records', href: '#' },
         // { title: isZh ? '更新日志' : isJa ? '変更履歴' : 'Changelog', href: '#' },
-        // { title: isZh ? '支持' : isJa ? 'サポート' : 'Support', href: '#' },
+        { title: isZh ? '支持' : isJa ? 'サポート' : 'Support', href: `${prefix}/support` },
       ],
     },
     // {
