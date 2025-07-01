@@ -1,0 +1,212 @@
+import { t, Translations } from '@/lib/translations'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { AppCard } from '@/components/AppCard'
+import { ShapesIcon } from '@/components/icons/ShapesIcon'
+import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
+import { CopyIcon } from '@/components/icons/CopyIcon'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+import { Note } from '@/components/mdx'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'PopBox - AI App Community',
+    'zh-CN': 'PopBox - AI 应用分享社区',
+    'ja-JP': 'PopBox - AI アプリ共有コミュニティ',
+  },
+  'metadata-description': {
+    'en': 'PopBox is a Pop AI App sharing community where you can experience applications created with the latest and most interesting AI capabilities.',
+    'zh-CN': 'PopBox 是一个 Pop AI App 分享社区，您可以在这里体验基于最新最好玩的 AI 能力创建出来的应用。',
+    'ja-JP': 'PopBox は Pop AI App 共有コミュニティで、最新で最も面白い AI 機能で作成されたアプリケーションを体験できます。',
+  },
+  'p-description': {
+    'en': 'Discover and experience amazing AI applications created by the community, built with cutting-edge AI capabilities.',
+    'zh-CN': '发现并体验社区创建的精彩 AI 应用，基于前沿的 AI 能力构建。',
+    'ja-JP': 'コミュニティが作成した素晴らしい AI アプリケーションを発見し、最先端の AI 機能で構築された体験をお楽しみください。',
+  },
+  'button-go-to-popbox': {
+    'en': 'Go to PopBox',
+    'zh-CN': '前往 PopBox',
+    'ja-JP': 'PopBox へ',
+  },
+  'h2-vision': {
+    'en': 'Our Vision',
+    'zh-CN': '我们的愿景',
+    'ja-JP': '私たちのビジョン',
+  },
+  'p-vision': {
+    'en': [
+      'PopBox is dedicated to building a vibrant AI application sharing community where creators and users can come together to explore the endless possibilities of AI technology.',
+      'We believe that the most innovative AI applications come from the creativity and imagination of the community. Through PopBox, we hope everyone can experience applications built with the latest and most interesting AI capabilities, and discover new ways AI can enhance our daily lives and work.',
+    ],
+    'zh-CN': [
+      'PopBox 致力于打造一个充满活力的 AI 应用分享社区，让创作者和用户聚集在一起，共同探索 AI 技术的无限可能。',
+      '我们相信最具创新性的 AI 应用来自于社区的创造力和想象力。通过 PopBox，我们希望大家可以体验到基于最新最好玩的 AI 能力创建出来的应用，发现 AI 在日常生活和工作中的更多可能性。',
+    ],
+    'ja-JP': [
+      'PopBox は、クリエイターとユーザーが集まり、AI 技術の無限の可能性を探求できる活気に満ちた AI アプリケーション共有コミュニティの構築に取り組んでいます。',
+      '最も革新的な AI アプリケーションは、コミュニティの創造性と想像力から生まれると信じています。PopBox を通じて、最新で最も面白い AI 機能で作成されたアプリケーションを体験し、AI が日常生活や仕事をどのように向上させるかの新しい方法を発見していただきたいと思います。',
+    ],
+  },
+  'h2-what-is-popbox': {
+    'en': 'What is PopBox',
+    'zh-CN': '什么是 PopBox',
+    'ja-JP': 'PopBox とは',
+  },
+  'p-what-is-popbox': {
+    'en': [
+      'PopBox is a Pop AI App sharing community platform where you can discover, experience, and share innovative AI applications.',
+      'Here, you can find various types of AI applications: from text generation tools to image creation apps, from productivity enhancers to entertainment applications. Each app showcases the unique creativity and practical value that AI technology brings.',
+      'Whether you\'re an AI enthusiast, a developer, or just curious about AI capabilities, PopBox provides you with a space to explore and experience the latest AI innovations.',
+    ],
+    'zh-CN': [
+      'PopBox 是一个 Pop AI App 分享社区平台，您可以在这里发现、体验和分享创新的 AI 应用。',
+      '在这里，您可以找到各种类型的 AI 应用：从文本生成工具到图像创作应用，从生产力增强工具到娱乐应用。每个应用都展示了 AI 技术带来的独特创意和实用价值。',
+      '无论您是 AI 爱好者、开发者，还是对 AI 能力感到好奇的用户，PopBox 都为您提供了一个探索和体验最新 AI 创新的空间。',
+    ],
+    'ja-JP': [
+      'PopBox は Pop AI App 共有コミュニティプラットフォームで、革新的な AI アプリケーションを発見、体験、共有することができます。',
+      'ここでは、テキスト生成ツールから画像作成アプリ、生産性向上ツールからエンターテイメントアプリまで、さまざまなタイプの AI アプリケーションを見つけることができます。各アプリは、AI 技術がもたらすユニークな創造性と実用的価値を示しています。',
+      'AI 愛好家、開発者、または AI 機能に興味がある方にかかわらず、PopBox は最新の AI イノベーションを探求し体験するためのスペースを提供します。',
+    ],
+  },
+  'h2-how-to-share': {
+    'en': 'How to Share Your App in PopBox',
+    'zh-CN': '如何在 PopBox 中分享您的应用',
+    'ja-JP': 'PopBox でアプリを共有する方法',
+  },
+  'p-how-to-share': {
+    'en': 'When creating an AI App, if you choose to allow public access, your application will appear in PopBox and can be discovered and used by other community members.',
+    'zh-CN': '创建 AI App 的时候如果选择允许公开访问的话，您的应用将可在 PopBox 中看到，其他社区成员可以发现并使用您的应用。',
+    'ja-JP': 'AI App を作成する際に、パブリックアクセスを許可することを選択すると、あなたのアプリケーションが PopBox に表示され、他のコミュニティメンバーが発見して使用できるようになります。',
+  },
+  'h3-sharing-steps': {
+    'en': 'Steps to Share:',
+    'zh-CN': '分享步骤：',
+    'ja-JP': '共有手順：',
+  },
+  'sharing-step-1': {
+    'en': 'Create your AI application using the PopLab AI platform',
+    'zh-CN': '使用 PopLab AI 平台创建您的 AI 应用',
+    'ja-JP': 'PopLab AI プラットフォームを使用して AI アプリケーションを作成する',
+  },
+  'sharing-step-2': {
+    'en': 'In the app creation form, set the Access permission to "Public"',
+    'zh-CN': '在应用创建表单中，将访问权限设置为 "Public"',
+    'ja-JP': 'アプリ作成フォームで、アクセス権限を "Public" に設定する',
+  },
+  'sharing-step-3': {
+    'en': 'Complete the app creation process',
+    'zh-CN': '完成应用创建流程',
+    'ja-JP': 'アプリ作成プロセスを完了する',
+  },
+  'sharing-step-4': {
+    'en': 'Your app will automatically appear in PopBox for others to discover and use',
+    'zh-CN': '您的应用将自动出现在 PopBox 中，供其他人发现和使用',
+    'ja-JP': 'あなたのアプリは自動的に PopBox に表示され、他の人が発見して使用できるようになります',
+  },
+  'h2-explore-apps': {
+    'en': 'Explore Apps in PopBox',
+    'zh-CN': '在 PopBox 中探索应用',
+    'ja-JP': 'PopBox でアプリを探索',
+  },
+  'p-explore-apps': {
+    'en': [
+      'Browse through a curated collection of AI applications created by the community.',
+      'Each app comes with clear descriptions, usage instructions, and examples to help you understand what it does and how to use it effectively.',
+      'You can try any public app immediately - just provide the required inputs and experience the AI-powered results.',
+    ],
+    'zh-CN': [
+      '浏览社区创建的精选 AI 应用集合。',
+      '每个应用都配有清晰的描述、使用说明和示例，帮助您理解应用的功能和如何有效使用。',
+      '您可以立即尝试任何公开应用 - 只需提供所需的输入，即可体验 AI 驱动的结果。',
+    ],
+    'ja-JP': [
+      'コミュニティが作成した厳選された AI アプリケーションのコレクションを閲覧できます。',
+      '各アプリには明確な説明、使用方法、例が付属しており、何ができるか、どのように効果的に使用するかを理解するのに役立ちます。',
+      'どのパブリックアプリもすぐに試すことができます。必要な入力を提供するだけで、AI による結果を体験できます。',
+    ],
+  },
+  'note-create-app': {
+    'en': 'Ready to create your own AI app? Use our AI-powered app creation tool to turn your ideas into reality.',
+    'zh-CN': '准备创建您自己的 AI 应用了吗？使用我们的 AI 驱动的应用创建工具，将您的想法变成现实。',
+    'ja-JP': '独自の AI アプリを作成する準備はできましたか？AI 駆動のアプリ作成ツールを使用して、アイデアを現実に変えましょう。',
+  },
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  if (Array.isArray(i(key))) {
+    return i(key).map((item, index) => <p key={index}>{item}</p>)
+  }
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [
+  // { title: i('h2-vision'), id: 'vision' },
+  // { title: i('h2-what-is-popbox'), id: 'what-is-popbox' },
+  // { title: i('h2-how-to-share'), id: 'how-to-share' },
+  // { title: i('h2-explore-apps'), id: 'explore-apps' },
+]
+
+{/* Start of Page */}
+
+# {i('title')}
+
+<div className="lead">
+  {p('p-description')}
+</div>
+
+<div className="not-prose my-6">
+  <Button href="https://poplab.ai/popbox" arrow="right">
+    {i('button-go-to-popbox')}
+  </Button>
+</div>
+
+## {i('h2-vision')} {{ anchor: false }}
+
+{p('p-vision')}
+
+![popbox](/content/popbox/popbox.png)
+
+## {i('h2-what-is-popbox')} {{ anchor: false }}
+
+{p('p-what-is-popbox')}
+
+## {i('h2-how-to-share')} {{ anchor: false }}
+
+{p('p-how-to-share')}
+
+### {i('h3-sharing-steps')} {{ anchor: false }}
+
+1. **{i('sharing-step-1')}**
+
+2. **{i('sharing-step-2')}**
+
+3. **{i('sharing-step-3')}**
+
+4. **{i('sharing-step-4')}**
+
+
+<Note>
+  {i('note-create-app')} 
+  <br />
+  [创建应用 →](createapp) <span className="mx-2 text-zinc-300 dark:text-zinc-600">|</span> [使用 AI 创建应用 →](createappwithai)
+</Note>
+
+## {i('h2-explore-apps')} {{ anchor: false }}
+
+{p('p-explore-apps')} 

@@ -1,0 +1,178 @@
+import { t, Translations } from '@/lib/translations'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { AppCard } from '@/components/AppCard'
+import { ShapesIcon } from '@/components/icons/ShapesIcon'
+import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
+import { CopyIcon } from '@/components/icons/CopyIcon'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+import { Note } from '@/components/mdx'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'Play App',
+    'zh-CN': '使用应用',
+    'ja-JP': 'アプリの使用',
+  },
+  'metadata-description': {
+    'en': 'Complete guide on how to use AI apps in PopLab AI - from setup to sharing your results.',
+    'zh-CN': '完整的 PopLab AI 应用使用指南 - 从设置到分享您的结果。',
+    'ja-JP': 'PopLab AI でのアプリ使用完全ガイド - セットアップから結果の共有まで。',
+  },
+  'p-description': {
+    'en': 'Run apps with a simple form fill, no more editing prompts.',
+    'zh-CN': '通过填写表单轻松运行应用，再也不用反复修改提示词。',
+    'ja-JP': 'フォームの入力でアプリを実行できます。プロンプトを編集する必要がなくなります。',
+  },
+  'h2-usage': {
+    'en': 'How to Use',
+    'zh-CN': '使用方式',
+    'ja-JP': '使用方法',
+  },
+  'p-step1': {
+    'en': 'Select a model and enter the corresponding API Key for the model provider.',
+    'zh-CN': '选择模型，填写对应模型供应商的 API Key。',
+    'ja-JP': 'モデルを選択し、対応するモデルプロバイダーの API Key を入力します。',
+  },
+  'p-step2': {
+    'en': 'Fill in the Input Form. If the app author has provided App Tips, you can click the button next to the Input title to view them. Note that fields marked with a red * are required.',
+    'zh-CN': '填写 Input Form，如果应用作者有提供 App Tips，可点击 Input 标题旁边的按钮查看。注意带红色*的是必填项。',
+    'ja-JP': 'Input Form を記入します。アプリ作者が App Tips を提供している場合は、Input タイトルの横にあるボタンをクリックして確認できます。赤い*が付いている項目は必須入力です。',
+  },
+  'p-step3': {
+    'en': 'Run the app and wait for the AI model service provider to return results. Please do not close the browser, otherwise the results will not be saved. Image generation may take a long time, up to several minutes.',
+    'zh-CN': '运行应用，等待 AI Model 服务商返回结果。请勿关闭浏览器，否则结果将无法保存。图片生成时间较长，几十秒都是正常情况，请耐心等待。',
+    'ja-JP': 'アプリを実行し、AI モデルサービスプロバイダーからの結果を待ちます。ブラウザを閉じると結果が保存されなくなります。画像生成には時間がかかる場合があります。数秒から数分かかることがあります。',
+  },
+  'p-step4': {
+    'en': 'Copy or download the results. If the generated content is code, please click the copy button in the code block directly.',
+    'zh-CN': '复制或下载结果，如果生成的是代码，请直接点击代码块中的复制按钮复制。',
+    'ja-JP': '結果をコピーまたはダウンロードします。生成されたコンテンツがコードの場合は、コードブロック内のコピーボタンを直接クリックしてください。',
+  },
+  'note-api-key': {
+    'en': 'If you don\'t have an API Key, we recommend applying for a free Google Gemini API to experience most text generation apps. For amazing image generation apps, you can enable OpenAI\'s API service.',
+    'zh-CN': '如果没有 API Key 推荐申请免费的 Google Gemini API，即可体验大部份文字生成类应用，开通 OpenAI 的 API 服务即可体验超棒的图片生成类应用',
+    'ja-JP': 'API キーをお持ちでない場合は、無料の Google Gemini API の申請をお勧めします。これにより、ほとんどのテキスト生成アプリを体験できます。素晴らしい画像生成アプリについては、OpenAI の API サービスを有効にしてください。',
+  },
+  'h2-api-key-settings': {
+    'en': 'AI Model API Key Settings',
+    'zh-CN': 'AI 模型 API Key 设置',
+    'ja-JP': 'AI モデル API キー設定',
+  },
+  'p-api-key-description': {
+    'en': 'For convenience in future use, if you are logged in, each API Key will be encrypted and saved to your account based on the model provider. If you are not logged in, the API key will be stored in the browser\'s local storage. Switching browsers or deleting cache will make the previous API Key unavailable.',
+    'zh-CN': '为了方便下次使用，如果登录了账号，每个 API Key 将根据模型供应商来加密保存到账号中，未登录账号 API key 将会存到浏览器 local storage 中，切换浏览器或删除缓存的话将无法使用上一次的 API Key。',
+    'ja-JP': '次回の利用の便宜のため、ログインしている場合、各 API Key はモデルプロバイダーに基づいて暗号化されてアカウントに保存されます。ログインしていない場合、API key はブラウザのローカルストレージに保存され、ブラウザの切り替えやキャッシュの削除により以前の API Key が使用できなくなります。',
+  },
+  'h2-history': {
+    'en': 'View History',
+    'zh-CN': '查看历史记录',
+    'ja-JP': '履歴を確認',
+  },
+  'p-history-description': {
+    'en': 'In the history list, you can view the results generated after successfully running AI apps. The system will save the latest 50 records. For users who are not logged in, the running records will be saved to the browser\'s local database. Switching browsers or deleting cache will make previous history records inaccessible.',
+    'zh-CN': '在历史记录列表中可以查看成功运行 AI 应用后生成的结果。将保存近 50 条记录。未登陆用户的运行记录将保存到浏览器本地数据库，切换浏览器或删除缓存将无法查看之前的历史记录。',
+    'ja-JP': '履歴リストでは、AI アプリの実行が成功した後に生成された結果を確認できます。最新の 50 件のレコードが保存されます。ログインしていないユーザーの実行記録はブラウザのローカルデータベースに保存され、ブラウザの切り替えやキャッシュの削除により以前の履歴レコードにアクセスできなくなります。',
+  },
+  'h2-share': {
+    'en': 'Share and Like Apps',
+    'zh-CN': '分享和点赞应用',
+    'ja-JP': 'アプリの共有といいね',
+  },
+  'p-share-description': {
+    'en': 'Click the like and share icons on the right side of the app title to perform these actions. In the share popup, you can directly copy the sharing text. You can also directly copy the browser address to share.',
+    'zh-CN': '点击应用标题哦右侧的点赞和分享icon进行操作，在分享弹窗中可以直接复制分享文案。也可以直接复制浏览器地址进行分享。',
+    'ja-JP': 'アプリタイトルの右側にあるいいねと共有アイコンをクリックして操作を行います。共有ポップアップでは、共有テキストを直接コピーできます。また、ブラウザのアドレスを直接コピーして共有することもできます。',
+  },
+  'step-title-1': {
+    'en': 'Select Model and API Key',
+    'zh-CN': '选择模型和 API Key',
+    'ja-JP': 'モデルと API キーを選択',
+  },
+  'step-title-2': {
+    'en': 'Fill Input Form',
+    'zh-CN': '填写输入表单',
+    'ja-JP': '入力フォームに記入',
+  },
+  'step-title-3': {
+    'en': 'Run Application',
+    'zh-CN': '运行应用',
+    'ja-JP': 'アプリケーションを実行',
+  },
+  'step-title-4': {
+    'en': 'Copy or Download Results',
+    'zh-CN': '复制或下载结果',
+    'ja-JP': '結果をコピーまたはダウンロード',
+  },
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  if (Array.isArray(i(key))) {
+    return i(key).map((item, index) => <p key={index}>{item}</p>)
+  }
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [
+  { title: i('h2-usage'), id: 'usage' },
+  { title: i('h2-api-key-settings'), id: 'api-key-settings' },
+  { title: i('h2-history'), id: 'history' },
+  { title: i('h2-share'), id: 'share' },
+]
+
+{/* Start of Page */}
+
+# {i('title')}
+
+<div className="lead">
+  {p('p-description')}
+</div>
+
+![playapp](/content/playapp/playapp.png)
+
+## {i('h2-usage')} {{ anchor: false }}
+
+1. **{i('step-title-1')}**: {i('p-step1')}
+
+2. **{i('step-title-2')}**: {i('p-step2')}
+
+3. **{i('step-title-3')}**: {i('p-step3')}
+
+4. **{i('step-title-4')}**: {i('p-step4')}
+
+<Note>
+  {i('note-api-key')}
+  <br />
+  [Google Gemini API →](https://aistudio.google.com/apikey) <span className="mx-2 text-zinc-300 dark:text-zinc-600">|</span> [OpenAI API →](https://platform.openai.com/api-keys)
+</Note>
+
+
+## {i('h2-api-key-settings')} {{ anchor: false }}
+
+{p('p-api-key-description')}
+
+## {i('h2-history')} {{ anchor: false }}
+
+{p('p-history-description')}
+
+## {i('h2-share')} {{ anchor: false }}
+
+{p('p-share-description')}
+
+![share](/content/playapp/share.png)
+
+

@@ -1,0 +1,131 @@
+import { t, Translations } from '@/lib/translations'
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { AppCard } from '@/components/AppCard'
+import { ShapesIcon } from '@/components/icons/ShapesIcon'
+import { PaperAirplaneIcon } from '@/components/icons/PaperAirplaneIcon'
+import { CopyIcon } from '@/components/icons/CopyIcon'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+import { Note } from '@/components/mdx'
+
+export const locale = 'auto'
+
+export const content = {
+  'title': {
+    'en': 'Deployment',
+    'zh-CN': '部署',
+    'ja-JP': 'デプロイメント',
+  },
+  'metadata-description': {
+    'en': 'Learn about PopLab AI deployment options including open source plans and private deployment for commercial use.',
+    'zh-CN': '了解 PopLab AI 的部署选项，包括开源计划和商业私有部署。',
+    'ja-JP': 'PopLab AI のデプロイメントオプションについて学びます。オープンソース計画と商用プライベートデプロイメントを含みます。',
+  },
+  'p-description': {
+    'en': 'Explore deployment options for PopLab AI, from upcoming open source release to commercial private deployment solutions.',
+    'zh-CN': '探索 PopLab AI 的部署选项，从即将到来的开源发布到商业私有部署解决方案。',
+    'ja-JP': 'PopLab AI のデプロイメントオプションを探索。今後のオープンソース リリースから商用プライベート デプロイメント ソリューションまで。',
+  },
+  'h2-open-source': {
+    'en': 'Open Source Plans',
+    'zh-CN': '开源计划',
+    'ja-JP': 'オープンソース計画',
+  },
+  'p-open-source-description': {
+    'en': <>PopLab AI has open source plans and will be open sourced after the official launch. Please follow our GitHub organization <a href="https://github.com/poplab-ai">PopLabAI</a> for the latest updates.</>,
+    'zh-CN': <>PopLab AI 有开源计划，将在正式上线后开源。尽请关注我们的 GitHub 组织 <a href="https://github.com/poplab-ai">PopLabAI</a> 获取最新消息。</>,
+    'ja-JP': <>PopLab AI にはオープンソース計画があり、正式リリース後にオープンソース化される予定です。GitHub の <a href="https://github.com/poplab-ai">PopLabAI</a> で最新情報を入手してください。</>,
+  },
+  'h2-private-deployment': {
+    'en': 'Private Deployment',
+    'zh-CN': '私有部署',
+    'ja-JP': 'プライベートデプロイメント',
+  },
+  'p-private-deployment-intro': {
+    'en': 'Currently supports commercial cooperation for private deployment.',
+    'zh-CN': '目前支持商业合作进行私有部署。',
+    'ja-JP': '現在、プライベートデプロイメントのための商業協力をサポートしています。',
+  },
+  'h3-business-value': {
+    'en': 'Commercial Value for Your Prompts',
+    'zh-CN': '提示词的商业价值',
+    'ja-JP': 'プロンプトの商業価値',
+  },
+  'p-business-value-description': {
+    'en': 'If your prompts are targeted at vertical users and have commercial value, you can use PopLab AI to package them into AI applications through a no-code approach and provide paid subscription services to customers.',
+    'zh-CN': '如果您的提示词面向垂直目标用户有商业价值，可使用 PopLab AI 通过无码的方式将其包装为 AI 应用，并为客户提供付费订阅服务。',
+    'ja-JP': 'プロンプトが垂直的なターゲットユーザーに向けられ、商業価値がある場合、PopLab AI を使用してノーコードでそれらを AI アプリケーションにパッケージ化し、顧客に有料サブスクリプション サービスを提供できます。',
+  },
+  'h3-customization': {
+    'en': 'Full Customization Support',
+    'zh-CN': '完全自定义支持',
+    'ja-JP': '完全なカスタマイゼーション サポート',
+  },
+  'p-customization-description': {
+    'en': 'Supports custom brand logo, styling, and domain name. No need to spend time developing websites.',
+    'zh-CN': '支持自定义品牌 Logo、样式和域名，无需花费时间开发网站。',
+    'ja-JP': 'カスタムブランドロゴ、スタイリング、ドメイン名をサポート。ウェブサイト開発に時間をかける必要はありません。',
+  },
+  'h3-contact': {
+    'en': 'Contact for Private Deployment',
+    'zh-CN': '私有部署联系方式',
+    'ja-JP': 'プライベートデプロイメントのお問い合わせ',
+  },
+  'contact-email': {
+    'en': 'tank@poplab.ai',
+    'zh-CN': 'tank@poplab.ai',
+    'ja-JP': 'tank@poplab.ai',
+  },
+}
+
+export const i = (key) => {
+  return t(key, locale, content)
+}
+
+export const p = (key) => {
+  if (Array.isArray(i(key))) {
+    return i(key).map((item, index) => <p key={index}>{item}</p>)
+  }
+  return <p>{i(key)}</p>
+}
+
+{/* Metadata */}
+export const metadata = {
+  title: i('title'),
+  description: i('metadata-description'),
+}
+
+export const sections = [
+  // { title: i('h2-open-source'), id: 'open-source' },
+  // { title: i('h2-private-deployment'), id: 'private-deployment' },
+]
+
+{/* Start of Page */}
+
+# {i('title')}
+
+<div className="lead">
+  {p('p-description')}
+</div>
+
+## {i('h2-open-source')} {{ anchor: false }}
+
+{p('p-open-source-description')}
+
+## {i('h2-private-deployment')} {{ anchor: false }}
+
+{p('p-private-deployment-intro')}
+
+### {i('h3-business-value')}
+
+{p('p-business-value-description')}
+
+### {i('h3-customization')}
+
+{p('p-customization-description')}
+
+### {i('h3-contact')} {{ anchor: false }}
+
+**Email**: [{i('contact-email')}](mailto:{i('contact-email')})

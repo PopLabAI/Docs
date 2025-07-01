@@ -38,7 +38,7 @@ function getNavigation(locale: string): Array<NavGroup> {
       links: [
         { title: isZh ? '欢迎使用' : isJa ? 'へようこそ' : 'Welcome', href: `${prefix}` },
         { title: isZh ? '快速开始' : isJa ? 'クイックスタート' : 'Quickstart', href: `${prefix}/quickstart` },
-        // { title: isZh ? '使用应用' : isJa ? 'アプリ体験' : 'Play App', href: '#' },
+        { title: isZh ? '使用应用' : isJa ? 'アプリ体験' : 'Play App', href: `${prefix}/playapp` },
         { title: isZh ? 'AI 创建应用' : isJa ? 'AI でアプリ作成' : 'Create App with AI', href: `${prefix}/createappwithai` },
         { title: isZh ? '创建应用' : isJa ? 'アプリ作成' : 'Create App', href: `${prefix}/createapp` },
         // { title: isZh ? '分享应用' : isJa ? 'アプリ共有' : 'Share App', href: '#' },
@@ -47,14 +47,14 @@ function getNavigation(locale: string): Array<NavGroup> {
         { title: isZh ? '支持' : isJa ? 'サポート' : 'Support', href: `${prefix}/support` },
       ],
     },
-    // {
-    //   title: 'PopBox',
-    //   links: [
-    //     { title: isZh ? '介绍' : isJa ? '紹介' : 'Introduction', href: '#' },
+    {
+      title: 'PopBox',
+      links: [
+        { title: isZh ? '介绍' : isJa ? '紹介' : 'Introduction', href: `${prefix}/popbox` },
     //     { title: isZh ? '集合' : isJa ? 'コレクション' : 'Collections', href: '#' },
     //     { title: isZh ? '社区' : isJa ? 'コミュニティ' : 'Community', href: '#' },
-    //   ],
-    // },
+      ],
+    },
     // {
     //   title: isZh ? 'AI 模型' : isJa ? 'AI モデル' : 'AI Models',
     //   links: [
@@ -66,14 +66,14 @@ function getNavigation(locale: string): Array<NavGroup> {
     //     { title: 'DeepSeek API', href: '#' },
     //   ],
     // },
-    // {
-    //   title: isZh ? '开源' : isJa ? 'オープンソース' : 'Open Source',
-    //   links: [
-    //     { title: isZh ? '部署' : isJa ? 'デプロイ' : 'Deploy', href: '#' },
+    {
+      title: isZh ? '开源' : isJa ? 'オープンソース' : 'Open Source',
+      links: [
+        { title: isZh ? '部署' : isJa ? 'デプロイ' : 'Deploy', href: `${prefix}/deploy` },
     //     { title: isZh ? 'Docker 镜像' : isJa ? 'Docker イメージ' : 'Docker Image', href: '#' },
     //     { title: isZh ? '开发' : isJa ? '開発' : 'Develop', href: '#' },
-    //   ],
-    // },
+      ],
+    },
   ]
 }
 
