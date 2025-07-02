@@ -31,7 +31,7 @@ interface Resource {
 function getResources(locale: string): Array<Resource> {
   const isZh = locale === 'zh-CN'
   const isJa = locale === 'ja-JP'
-  const prefix = locale === 'en' ? '' : `/${locale}`
+  const prefix = locale === 'en' ? 'en' : `/${locale}`
 
   return [
     {
@@ -69,7 +69,7 @@ function getResources(locale: string): Array<Resource> {
       },
     },
     {
-      href: `${prefix}/opensource`,
+      href: `${prefix}/deploy`,
       name: isZh ? '开源项目' : isJa ? 'オープンソース' : 'Open Source',
       description: isZh 
         ? 'PopLab 是一个开源项目，您可以找到源代码并为项目做出贡献。'
@@ -86,7 +86,7 @@ function getResources(locale: string): Array<Resource> {
       },
     },
     {
-      href: `${prefix}/dockerimage`,
+      href: `${prefix}/deploy`,
       name: isZh ? 'Docker 镜像' : isJa ? 'Docker イメージ' : 'Docker Image',
       description: isZh 
         ? 'PopLab 提供 Docker 镜像，您可以轻松在自己的服务器上部署。'
