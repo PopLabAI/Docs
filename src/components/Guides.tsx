@@ -29,7 +29,7 @@ function getGuides(locale: string) {
         : 'Through PopBox creative community, explore and share awesome Pop AI Apps from creators around the world.',
     },
     {
-      href: `${prefix}/aimodes`,
+      href: '',
       name: isZh ? '支持的 AI 模型' : isJa ? '対応 AI モード' : 'Supported AI Modes',
       description: isZh 
         ? '了解 PopLab 支持的 AI 模型和能力。从文本到图片，满足大部份应用需求。'
@@ -71,7 +71,7 @@ export function Guides() {
               {guide.description}
             </p>
             <p className="mt-4">
-              <Button href={guide.href} variant="text" arrow="right">
+              <Button href={guide.href} variant="text" arrow="right" className={ guide.href === '' ? 'pointer-events-none text-zinc-400' : '' } >
                 {currentLocale === 'zh-CN' ? '了解更多' : currentLocale === 'ja-JP' ? '詳細を見る' : 'Read more'}
               </Button>
             </p>
